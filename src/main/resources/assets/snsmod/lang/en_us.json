@@ -1,5 +1,4 @@
 {
-  "item.snsmod.candy_cane_sugar": "Candy Cane Sugar",
 
   "block.snsmod.candy_cane_block": "Candy Cane Block",
   "block.snsmod.candy_cane_block_button": "Candy Cane Button",
@@ -102,11 +101,13 @@
 
   "block.snsmod.hardened_mint_block": "Hardened Mint Block",
   "block.snsmod.hardened_mint_block_button": "Hardened Mint Block Button",
+  "block.snsmod.hardened_mint_block_door": "Hardened Mint Block Door",
   "block.snsmod.hardened_mint_block_fence": "Hardened Mint Block Fence",
   "block.snsmod.hardened_mint_block_fence_gate": "Hardened Mint Block Fence Gate",
   "block.snsmod.hardened_mint_block_pressure_plate": "Hardened Mint Block Pressure Plate",
   "block.snsmod.hardened_mint_block_slab": "Hardened Mint Block Slab",
   "block.snsmod.hardened_mint_block_stairs": "Hardened Mint Block Stairs",
+  "block.snsmod.hardened_mint_block_trapdoor": "Hardened Mint Block Trapdoor",
   "block.snsmod.hardened_mint_block_wall": "Hardened Mint Block Wall",
 
   "block.snsmod.toothpaste_block": "Toothpaste Block",
@@ -135,6 +136,17 @@
   "block.snsmod.hardened_toothpaste_block_slab": "Hardened Toothpaste Block Slab",
   "block.snsmod.hardened_toothpaste_block_stairs": "Hardened Toothpaste Block Stairs",
   "block.snsmod.hardened_toothpaste_block_wall": "Hardened Toothpaste Block Wall",
+
+
+
+
+
+  "item.snsmod.candy_cane": "Candy Cane",
+  "item.snsmod.candy_cane_sugar": "Candy Cane Sugar",
+  "item.snsmod.mint_chocolate_ball": "Mint Chocolate Ball",
+  "item.snsmod.mint_imperial": "Mint Imperial",
+  "item.snsmod.mint_marshmallow": "Mint Marshmallow",
+  "item.snsmod.toothpaste": "Toothpaste",
 
 
   "snstab.food_tab": "Food - Sweet Not Savoury",

@@ -119,11 +119,13 @@ public class SNSBlockStateProvider extends BlockStateProvider {
 //HARDENED_MINT
         blockWithItem(SNSBlocks.HARDENED_MINT_BLOCK);
         buttonBlock((ButtonBlock) SNSBlocks.HARDENED_MINT_BLOCK_BUTTON.get(), blockTexture(SNSBlocks.HARDENED_MINT_BLOCK.get()));
+        doorBlockWithRenderType((DoorBlock)SNSBlocks.HARDENED_MINT_BLOCK_DOOR.get(), modLoc("block/hardened_mint_block_door_bottom"), modLoc("block/hardened_mint_block_door_top"), "translucent");
         fenceBlock((FenceBlock) SNSBlocks.HARDENED_MINT_BLOCK_FENCE.get(), blockTexture(SNSBlocks.HARDENED_MINT_BLOCK.get()));
         fenceGateBlock((FenceGateBlock) SNSBlocks.HARDENED_MINT_BLOCK_FENCE_GATE.get(), blockTexture(SNSBlocks.HARDENED_MINT_BLOCK.get()));
         pressurePlateBlock((PressurePlateBlock) SNSBlocks.HARDENED_MINT_BLOCK_PRESSURE_PLATE.get(), blockTexture(SNSBlocks.HARDENED_MINT_BLOCK.get()));
         slabBlock((SlabBlock) SNSBlocks.HARDENED_MINT_BLOCK_SLAB.get(), blockTexture(SNSBlocks.HARDENED_MINT_BLOCK.get()), blockTexture(SNSBlocks.HARDENED_MINT_BLOCK.get()));
         stairsBlock((StairBlock) SNSBlocks.HARDENED_MINT_BLOCK_STAIRS.get(), blockTexture(SNSBlocks.HARDENED_MINT_BLOCK.get()));
+        trapdoorBlockWithRenderType((TrapDoorBlock) SNSBlocks.HARDENED_MINT_BLOCK_TRAPDOOR.get(), modLoc("block/hardened_mint_block_trapdoor"), true, "translucent");
         wallBlock((WallBlock) SNSBlocks.HARDENED_MINT_BLOCK_WALL.get(), blockTexture(SNSBlocks.HARDENED_MINT_BLOCK.get()));
 //TOOTHPASTE
         blockWithItem(SNSBlocks.TOOTHPASTE_BLOCK);
@@ -212,6 +214,7 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.HARDENED_MINT_BLOCK_PRESSURE_PLATE);
         blockItem(SNSBlocks.HARDENED_MINT_BLOCK_SLAB);
         blockItem(SNSBlocks.HARDENED_MINT_BLOCK_STAIRS);
+        blockItem(SNSBlocks.HARDENED_MINT_BLOCK_TRAPDOOR, "_bottom");
 
         blockItem(SNSBlocks.TOOTHPASTE_BLOCK_FENCE_GATE);
         blockItem(SNSBlocks.TOOTHPASTE_BLOCK_PRESSURE_PLATE);
@@ -227,6 +230,10 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_PRESSURE_PLATE);
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB);
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS);
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("snsmod:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

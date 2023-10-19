@@ -15,7 +15,12 @@ public class SNSTabs {
 
     public static final RegistryObject<CreativeModeTab> FOOD_TAB = CREATIVE_MODE_TABS.register("food_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANE_SUGAR.get()))
             .title(Component.translatable("snstab.food_tab")).displayItems((displayParameters, output) -> {
+                output.accept(SNSItems.CANDY_CANE.get());
                 output.accept(SNSItems.CANDY_CANE_SUGAR.get());
+                output.accept(SNSItems.MINT_CHOCOLATE_BALL.get());
+                output.accept(SNSItems.MINT_IMPERIAL.get());
+                output.accept(SNSItems.MINT_MARSHMALLOW.get());
+                output.accept(SNSItems.TOOTHPASTE.get());
             }).build());
 
     public static final RegistryObject<CreativeModeTab> BLOCK_TAB = CREATIVE_MODE_TABS.register("block_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSBlocks.CANDY_CANE_BLOCK.get()))
@@ -122,11 +127,13 @@ public class SNSTabs {
                 //HARDENED_MINT
                 output.accept(SNSBlocks.HARDENED_MINT_BLOCK.get());
                 output.accept(SNSBlocks.HARDENED_MINT_BLOCK_BUTTON.get());
+                output.accept(SNSBlocks.HARDENED_MINT_BLOCK_DOOR.get());
                 output.accept(SNSBlocks.HARDENED_MINT_BLOCK_FENCE.get());
                 output.accept(SNSBlocks.HARDENED_MINT_BLOCK_FENCE_GATE.get());
                 output.accept(SNSBlocks.HARDENED_MINT_BLOCK_PRESSURE_PLATE.get());
                 output.accept(SNSBlocks.HARDENED_MINT_BLOCK_SLAB.get());
                 output.accept(SNSBlocks.HARDENED_MINT_BLOCK_STAIRS.get());
+                output.accept(SNSBlocks.HARDENED_MINT_BLOCK_TRAPDOOR.get());
                 output.accept(SNSBlocks.HARDENED_MINT_BLOCK_WALL.get());
                 //TOOTHPASTE
                 output.accept(SNSBlocks.TOOTHPASTE_BLOCK.get());

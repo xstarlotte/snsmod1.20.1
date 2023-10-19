@@ -117,11 +117,13 @@ public class SNSLootTables extends BlockLootSubProvider {
 //HARDENED_MINT
         this.dropSelf(SNSBlocks.HARDENED_MINT_BLOCK.get());
         this.dropSelf(SNSBlocks.HARDENED_MINT_BLOCK_BUTTON.get());
+        this.add(SNSBlocks.HARDENED_MINT_BLOCK_DOOR.get(), block -> createDoorTable(SNSBlocks.HARDENED_MINT_BLOCK_DOOR.get()));
         this.dropSelf(SNSBlocks.HARDENED_MINT_BLOCK_FENCE.get());
         this.dropSelf(SNSBlocks.HARDENED_MINT_BLOCK_FENCE_GATE.get());
         this.dropSelf(SNSBlocks.HARDENED_MINT_BLOCK_PRESSURE_PLATE.get());
         this.add(SNSBlocks.HARDENED_MINT_BLOCK_SLAB.get(), block -> createSlabItemTable(SNSBlocks.HARDENED_MINT_BLOCK_SLAB.get()));
         this.dropSelf(SNSBlocks.HARDENED_MINT_BLOCK_STAIRS.get());
+        this.dropSelf(SNSBlocks.HARDENED_MINT_BLOCK_TRAPDOOR.get());
         this.dropSelf(SNSBlocks.HARDENED_MINT_BLOCK_WALL.get());
 //TOOTHPASTE
         this.dropSelf(SNSBlocks.TOOTHPASTE_BLOCK.get());

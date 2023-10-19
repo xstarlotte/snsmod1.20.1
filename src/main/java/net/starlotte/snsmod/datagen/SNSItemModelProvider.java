@@ -36,6 +36,8 @@ public class SNSItemModelProvider extends ItemModelProvider {
         buttonItem(SNSBlocks.TOOTHPASTE_BLOCK_BUTTON, SNSBlocks.TOOTHPASTE_BLOCK);
         buttonItem(SNSBlocks.TOOTHPASTE_BRICKS_BUTTON, SNSBlocks.TOOTHPASTE_BRICKS);
         buttonItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_BUTTON, SNSBlocks.HARDENED_TOOTHPASTE_BLOCK);
+//DOOR ITEMS
+        simpleBlockItem(SNSBlocks.HARDENED_MINT_BLOCK_DOOR);
 //FENCE ITEMS
         fenceItem(SNSBlocks.CANDY_CANE_BLOCK_FENCE, SNSBlocks.CANDY_CANE_BLOCK);
         fenceItem(SNSBlocks.CANDY_CANE_BRICKS_FENCE, SNSBlocks.CANDY_CANE_BRICKS);
@@ -69,7 +71,12 @@ public class SNSItemModelProvider extends ItemModelProvider {
         wallItem(SNSBlocks.TOOTHPASTE_BRICKS_WALL, SNSBlocks.TOOTHPASTE_BRICKS);
         wallItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL, SNSBlocks.HARDENED_TOOTHPASTE_BLOCK);
 //SIMPLE ITEMS
+        simpleItem(SNSItems.CANDY_CANE);
         simpleItem(SNSItems.CANDY_CANE_SUGAR);
+        simpleItem(SNSItems.MINT_CHOCOLATE_BALL);
+        simpleItem(SNSItems.MINT_IMPERIAL);
+        simpleItem(SNSItems.MINT_MARSHMALLOW);
+        simpleItem(SNSItems.TOOTHPASTE);
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
@@ -80,6 +87,12 @@ public class SNSItemModelProvider extends ItemModelProvider {
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture",  new ResourceLocation(SNSMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(SNSMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

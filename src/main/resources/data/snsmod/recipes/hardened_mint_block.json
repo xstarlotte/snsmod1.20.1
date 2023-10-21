@@ -1,6 +1,6 @@
 {
   "type": "snsmod:candy_cane_furnace",
-  "category": "misc",
+  "category": "blocks",
   "cookingtime": 50,
   "experience": 0.5,
   "ingredient": {

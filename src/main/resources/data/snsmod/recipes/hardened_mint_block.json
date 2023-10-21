@@ -1,0 +1,10 @@
+{
+  "type": "snsmod:candy_cane_furnace",
+  "category": "misc",
+  "cookingtime": 50,
+  "experience": 0.5,
+  "ingredient": {
+    "block": "snsmod:mint_block"
+  },
+  "result": "snsmod:hardened_mint_block"
+}

@@ -1,7 +1,7 @@
 package net.starlotte.snsmod;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -14,6 +14,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.starlotte.snsmod.block.SNSBlocks;
 import net.starlotte.snsmod.item.SNSItems;
+import net.starlotte.snsmod.screen.CandyCaneFurnaceScreen;
+import net.starlotte.snsmod.screen.SNSMenuTypes;
 import org.slf4j.Logger;
 
 @Mod(SNSMod.MOD_ID)
@@ -50,7 +52,11 @@ public class SNSMod {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            event.enqueueWork(() -> {
 
+                MenuScreens.register(SNSMenuTypes.CANDY_CANE_FURNACE_MENU.get(), CandyCaneFurnaceScreen::new);
+
+            });
         }
     }
 }

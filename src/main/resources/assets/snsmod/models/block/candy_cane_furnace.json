@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "snsmod:block/candy_cane_furnace_front",
+    "side": "snsmod:block/candy_cane_furnace_side",
+    "top": "snsmod:block/candy_cane_furnace_top"
+  }
+}

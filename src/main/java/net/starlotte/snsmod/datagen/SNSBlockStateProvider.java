@@ -1,6 +1,7 @@
 package net.starlotte.snsmod.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -26,6 +27,7 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) SNSBlocks.CANDY_CANE_BLOCK_SLAB.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
         stairsBlock((StairBlock) SNSBlocks.CANDY_CANE_BLOCK_STAIRS.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
         wallBlock((WallBlock) SNSBlocks.CANDY_CANE_BLOCK_WALL.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
+
 //CANDY_CANE_BRICK
         blockWithItem(SNSBlocks.CANDY_CANE_BRICKS);
         buttonBlock((ButtonBlock) SNSBlocks.CANDY_CANE_BRICKS_BUTTON.get(), blockTexture(SNSBlocks.CANDY_CANE_BRICKS.get()));
@@ -159,6 +161,11 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_PRESSURE_PLATE);
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_SLAB);
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_STAIRS);
+        simpleBlockWithItem(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get(), models().orientableWithBottom(SNSBlocks.CANDY_CANE_GRASS_BLOCK.getId().getPath(),
+                modLoc("block/candy_cane_grass_block_side"),
+                modLoc("block/candy_cane_grass_block_side"),
+                new ResourceLocation("snsmod:block/candy_cane_grass_block_bottom"),
+                modLoc("block/candy_cane_grass_block_top")));
 
         blockItem(SNSBlocks.CANDY_CANE_BRICKS_FENCE_GATE);
         blockItem(SNSBlocks.CANDY_CANE_BRICKS_PRESSURE_PLATE);
@@ -230,6 +237,9 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_PRESSURE_PLATE);
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB);
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS);
+
+
+
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {

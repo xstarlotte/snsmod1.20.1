@@ -3,6 +3,7 @@ package net.starlotte.snsmod.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.starlotte.snsmod.SNSMod;
@@ -117,6 +118,11 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_SLAB.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_STAIRS.get()
 
+
+                );
+
+        this.tag(BlockTags.DIRT)
+                .add(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get()
 
                 );
 

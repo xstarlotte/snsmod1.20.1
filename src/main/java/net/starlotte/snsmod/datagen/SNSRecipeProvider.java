@@ -1,10 +1,8 @@
 package net.starlotte.snsmod.datagen;
 
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -26,6 +24,14 @@ public class SNSRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SNSBlocks.CANDY_CANE_FURNACE.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("AAA")
+                .define('A', SNSBlocks.CANDY_CANE_BLOCK.get())
+                .unlockedBy("has_candy_cane_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(SNSBlocks.CANDY_CANE_BLOCK.get()).build()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

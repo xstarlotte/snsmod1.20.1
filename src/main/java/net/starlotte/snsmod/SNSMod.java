@@ -2,6 +2,8 @@ package net.starlotte.snsmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -15,6 +17,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.starlotte.snsmod.block.SNSBlocks;
 import net.starlotte.snsmod.block.entity.SNSBlockEntities;
 import net.starlotte.snsmod.item.SNSItems;
+import net.starlotte.snsmod.painting.SNSPaintings;
+import net.starlotte.snsmod.particle.SNSParticles;
 import net.starlotte.snsmod.recipe.SNSRecipes;
 import net.starlotte.snsmod.screen.CandyCaneFurnaceScreen;
 import net.starlotte.snsmod.screen.SNSMenuTypes;
@@ -34,6 +38,8 @@ public class SNSMod {
         SNSMenuTypes.register(modEventBus);
         SNSBlockEntities.register(modEventBus);
         SNSRecipes.register(modEventBus);
+        SNSPaintings.register(modEventBus);
+        SNSParticles.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -41,9 +47,11 @@ public class SNSMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
 
+        });
     }
-
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
     }
 

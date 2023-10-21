@@ -126,6 +126,11 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
 
                 );
 
+        this.tag(BlockTags.FLOWERS)
+                .add(SNSBlocks.CANDY_CANE_FLOWER.get()
+
+                );
+
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
 
     }

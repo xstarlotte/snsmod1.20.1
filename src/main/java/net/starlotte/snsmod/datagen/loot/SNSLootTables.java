@@ -153,6 +153,10 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.add(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB.get(), block -> createSlabItemTable(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB.get()));
         this.dropSelf(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS.get());
         this.dropSelf(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get());
+//FLORA
+        this.dropSelf(SNSBlocks.CANDY_CANE_FLOWER.get());
+        this.add(SNSBlocks.POTTED_CANDY_CANE_FLOWER.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_FLOWER.get()));
 //BLOCK ENTITIES
 // FURNACES
         this.dropSelf(SNSBlocks.CANDY_CANE_FURNACE.get());

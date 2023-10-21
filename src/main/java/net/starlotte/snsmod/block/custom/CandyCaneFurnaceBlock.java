@@ -22,6 +22,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.network.NetworkHooks;
 import net.starlotte.snsmod.block.entity.SNSBlockEntities;
 import net.starlotte.snsmod.block.entity.CandyCaneFurnaceBlockEntity;
+import net.starlotte.snsmod.particle.SNSParticles;
 import org.jetbrains.annotations.Nullable;
 
 public class CandyCaneFurnaceBlock extends AbstractFurnaceBlock {
@@ -64,8 +65,8 @@ public class CandyCaneFurnaceBlock extends AbstractFurnaceBlock {
             double d5 = direction$axis == Direction.Axis.X ? (double)direction.getStepX() * 0.52D : d4;
             double d6 = pRandom.nextDouble() * 6.0D / 16.0D;
             double d7 = direction$axis == Direction.Axis.Z ? (double)direction.getStepZ() * 0.52D : d4;
-            pLevel.addParticle(ParticleTypes.SMOKE, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
-            pLevel.addParticle(ParticleTypes.FLAME, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
+            pLevel.addParticle(SNSParticles.CANDY_CANE_FLAME_PARTICLES.get(), d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
+           // pLevel.addParticle(SNSParticles.CANDY_CANE_SMOKE_PARTICLES.get(), d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
         }
     }
 

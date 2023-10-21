@@ -27,7 +27,6 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) SNSBlocks.CANDY_CANE_BLOCK_SLAB.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
         stairsBlock((StairBlock) SNSBlocks.CANDY_CANE_BLOCK_STAIRS.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
         wallBlock((WallBlock) SNSBlocks.CANDY_CANE_BLOCK_WALL.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
-
 //CANDY_CANE_BRICK
         blockWithItem(SNSBlocks.CANDY_CANE_BRICKS);
         buttonBlock((ButtonBlock) SNSBlocks.CANDY_CANE_BRICKS_BUTTON.get(), blockTexture(SNSBlocks.CANDY_CANE_BRICKS.get()));
@@ -238,7 +237,9 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB);
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS);
 
-
+//FLORA
+        simpleBlock(SNSBlocks.CANDY_CANE_FLOWER.get(),
+                models().cross(blockTexture(SNSBlocks.CANDY_CANE_FLOWER.get()).getPath(), blockTexture(SNSBlocks.CANDY_CANE_FLOWER.get())).renderType("cutout"));
 
     }
 

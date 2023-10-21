@@ -13,20 +13,6 @@ import net.starlotte.snsmod.item.SNSItems;
 public class SNSTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SNSMod.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> FOOD_TAB = CREATIVE_MODE_TABS.register("food_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANE.get()))
-            .title(Component.translatable("snstab.food_tab")).displayItems((displayParameters, output) -> {
-                output.accept(SNSItems.CANDY_CANE.get());
-                output.accept(SNSItems.MINT_CHOCOLATE_BALL.get());
-                output.accept(SNSItems.MINT_IMPERIAL.get());
-                output.accept(SNSItems.MINT_MARSHMALLOW.get());
-                output.accept(SNSItems.TOOTHPASTE.get());
-            }).build());
-
-    public static final RegistryObject<CreativeModeTab> MISC_TAB = CREATIVE_MODE_TABS.register("misc_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANE_SUGAR.get()))
-            .title(Component.translatable("snstab.misc_tab")).displayItems((displayParameters, output) -> {
-                output.accept(SNSItems.CANDY_CANE_SUGAR.get());
-            }).build());
-
     public static final RegistryObject<CreativeModeTab> BLOCK_TAB = CREATIVE_MODE_TABS.register("block_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSBlocks.CANDY_CANE_BLOCK.get()))
             .title(Component.translatable("snstab.block_tab")).displayItems((displayParameters, output) -> {
                 //CANDY_CANE
@@ -168,6 +154,27 @@ public class SNSTabs {
                 output.accept(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS.get());
                 output.accept(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get());
             }).build());
+
+    public static final RegistryObject<CreativeModeTab> DECORATION_TAB = CREATIVE_MODE_TABS.register("decoration_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSBlocks.CANDY_CANE_FLOWER.get()))
+            .title(Component.translatable("snstab.decoration_tab")).displayItems((displayParameters, output) -> {
+                output.accept(SNSBlocks.CANDY_CANE_FLOWER.get());
+            }).build());
+
+    public static final RegistryObject<CreativeModeTab> FOOD_TAB = CREATIVE_MODE_TABS.register("food_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANE.get()))
+            .title(Component.translatable("snstab.food_tab")).displayItems((displayParameters, output) -> {
+                output.accept(SNSItems.CANDY_CANE.get());
+                output.accept(SNSItems.MINT_CHOCOLATE_BALL.get());
+                output.accept(SNSItems.MINT_IMPERIAL.get());
+                output.accept(SNSItems.MINT_MARSHMALLOW.get());
+                output.accept(SNSItems.TOOTHPASTE.get());
+            }).build());
+
+    public static final RegistryObject<CreativeModeTab> MISC_TAB = CREATIVE_MODE_TABS.register("misc_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANE_SUGAR.get()))
+            .title(Component.translatable("snstab.misc_tab")).displayItems((displayParameters, output) -> {
+                output.accept(SNSItems.CANDY_CANE_SUGAR.get());
+            }).build());
+
+
 
 
     public static void register(IEventBus eventBus) {

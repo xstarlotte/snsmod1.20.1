@@ -139,7 +139,7 @@
   "block.snsmod.hardened_toothpaste_block_stairs": "Hardened Toothpaste Block Stairs",
   "block.snsmod.hardened_toothpaste_block_wall": "Hardened Toothpaste Block Wall",
 
-
+  "block.snsmod.candy_cane_flower": "Candy Cane Flower",
 
   "block.snsmod.candy_cane_furnace": "Candy Cane Furnace",
 
@@ -149,6 +149,9 @@
   "item.snsmod.mint_imperial": "Mint Imperial",
   "item.snsmod.mint_marshmallow": "Mint Marshmallow",
   "item.snsmod.toothpaste": "Toothpaste",
+
+  "painting.snsmod.candy_cane.title": "Candy Cane",
+  "painting.snsmod.candy_cane.author": "Starlotte",
 
   "snstab.block_tab": "Blocks - Sweet Not Savoury",
   "snstab.food_tab": "Food - Sweet Not Savoury",

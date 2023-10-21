@@ -23,6 +23,7 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new SNSRecipeProvider(packOutput));
         generator.addProvider(event.includeServer(), SNSLootTableProvider.create(packOutput));
         generator.addProvider(event.includeServer(), new SNSBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeClient(), new SNSPaintingVariantTagProvider(packOutput, lookupProvider, existingFileHelper));
 
         generator.addProvider(event.includeClient(), new SNSItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new SNSBlockStateProvider(packOutput, existingFileHelper));

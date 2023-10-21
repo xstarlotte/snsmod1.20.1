@@ -77,6 +77,8 @@ public class SNSItemModelProvider extends ItemModelProvider {
         simpleItem(SNSItems.MINT_IMPERIAL);
         simpleItem(SNSItems.MINT_MARSHMALLOW);
         simpleItem(SNSItems.TOOTHPASTE);
+//SIMPLE BLOCK ITEMS
+        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER);
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {

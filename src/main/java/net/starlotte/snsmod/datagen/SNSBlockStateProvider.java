@@ -241,6 +241,25 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         simpleBlock(SNSBlocks.CANDY_CANE_FLOWER.get(),
                 models().cross(blockTexture(SNSBlocks.CANDY_CANE_FLOWER.get()).getPath(), blockTexture(SNSBlocks.CANDY_CANE_FLOWER.get())).renderType("cutout"));
 
+//WOOD
+        axisBlock((RotatedPillarBlock) SNSBlocks.STRIPPED_CANDY_CANE_STALK.get(), models().sideBottomTop(SNSBlocks.CANDY_CANE_STALK.getId().getPath(),
+                modLoc("block/stripped_candy_cane_stalk"),
+                modLoc("block/stripped_candy_cane_stalk_top"),
+                modLoc("block/stripped_candy_cane_stalk_bottom")));
+        logBlock((RotatedPillarBlock) SNSBlocks.CANDY_CANE_STALK.get(), models().sideBottomTop(SNSBlocks.CANDY_CANE_STALK.getId().getPath(),
+                modLoc("block/candy_cane_stalk"),
+                modLoc("block/candy_cane_stalk_top"),
+                modLoc("block/candy_cane_stalk_bottom")));
+//GRASS
+        simpleBlockWithItem(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get(), models().orientableWithBottom(SNSBlocks.CANDY_CANE_GRASS_BLOCK.getId().getPath(),
+                modLoc("block/candy_cane_grass_block_side"),
+                modLoc("block/candy_cane_grass_block_side"),
+                new ResourceLocation("snsmod:block/candy_cane_grass_block_bottom"),
+                modLoc("block/candy_cane_grass_block_top")));
+
+
+        logBlock(((RotatedPillarBlock) SNSBlocks.CANDY_CANE_STALK.get()));
+
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
@@ -253,5 +272,9 @@ public class SNSBlockStateProvider extends BlockStateProvider {
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void sideBottomTop(RegistryObject<Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("snsmod:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 }

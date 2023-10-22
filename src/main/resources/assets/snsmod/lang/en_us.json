@@ -56,6 +56,15 @@
   "block.snsmod.candy_cane_bricks_yellow_stairs": "Yellow Candy Cane Bricks Stairs",
   "block.snsmod.candy_cane_bricks_yellow_wall": "Yellow Candy Cane Bricks Wall",
 
+  "block.snsmod.candy_cane_flower": "Candy Cane Flower",
+
+  "block.snsmod.candy_cane_furnace": "Candy Cane Furnace",
+
+  "block.snsmod.candy_cane_sapling": "Candy Cane Sapling",
+  "block.snsmod.candy_cane_stalk_planks": "Candy Cane Planks",
+  "block.snsmod.candy_cane_stalk": "Candy Cane Stalk",
+  "block.snsmod.stripped_candy_cane_stalk": "Stripped Candy Cane Stalk",
+
   "block.snsmod.humbug_block": "Humbug Block",
   "block.snsmod.humbug_block_button": "Humbug Block Button",
   "block.snsmod.humbug_block_fence": "Humbug Block Fence",
@@ -139,9 +148,8 @@
   "block.snsmod.hardened_toothpaste_block_stairs": "Hardened Toothpaste Block Stairs",
   "block.snsmod.hardened_toothpaste_block_wall": "Hardened Toothpaste Block Wall",
 
-  "block.snsmod.candy_cane_flower": "Candy Cane Flower",
 
-  "block.snsmod.candy_cane_furnace": "Candy Cane Furnace",
+
 
   "item.snsmod.candy_cane": "Candy Cane",
   "item.snsmod.candy_cane_sugar": "Candy Cane Sugar",

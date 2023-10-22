@@ -25,6 +25,9 @@ public class SNSTabs {
                 output.accept(SNSBlocks.CANDY_CANE_BLOCK_STAIRS.get());
                 output.accept(SNSBlocks.CANDY_CANE_BLOCK_WALL.get());
                 output.accept(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get());
+                output.accept(SNSBlocks.CANDY_CANE_STALK.get());
+                output.accept(SNSBlocks.CANDY_CANE_STALK_PLANKS.get());
+                output.accept(SNSBlocks.STRIPPED_CANDY_CANE_STALK.get());
                 //CANDY_CANE_BRICKS
                 output.accept(SNSBlocks.CANDY_CANE_BRICKS.get());
                 output.accept(SNSBlocks.CANDY_CANE_BRICKS_BUTTON.get());
@@ -158,6 +161,7 @@ public class SNSTabs {
     public static final RegistryObject<CreativeModeTab> DECORATION_TAB = CREATIVE_MODE_TABS.register("decoration_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSBlocks.CANDY_CANE_FLOWER.get()))
             .title(Component.translatable("snstab.decoration_tab")).displayItems((displayParameters, output) -> {
                 output.accept(SNSBlocks.CANDY_CANE_FLOWER.get());
+                output.accept(SNSBlocks.CANDY_CANE_SAPLING.get());
             }).build());
 
     public static final RegistryObject<CreativeModeTab> FOOD_TAB = CREATIVE_MODE_TABS.register("food_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANE.get()))

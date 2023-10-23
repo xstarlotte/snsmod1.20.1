@@ -20,7 +20,12 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-//FENCE
+
+        this.tag(BlockTags.DIRT)
+                .add(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get()
+
+                );
+
         this.tag(BlockTags.FENCES)
                 .add(SNSBlocks.CANDY_CANE_BLOCK_FENCE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_FENCE.get(),
@@ -28,6 +33,7 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.CANDY_CANE_BRICKS_GREEN_FENCE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_FENCE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_YELLOW_FENCE.get(),
+                        SNSBlocks.CANDY_CANE_PLANK_FENCE.get(),
                         SNSBlocks.HUMBUG_BLOCK_FENCE.get(),
                         SNSBlocks.HUMBUG_BRICKS_FENCE.get(),
                         SNSBlocks.HARDENED_HUMBUG_BLOCK_FENCE.get(),
@@ -38,7 +44,7 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.TOOTHPASTE_BRICKS_FENCE.get(),
                         SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_FENCE.get()
                 );
-//FENCE GATES
+
         this.tag(BlockTags.FENCE_GATES)
                 .add(SNSBlocks.CANDY_CANE_BLOCK_FENCE_GATE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_FENCE_GATE.get(),
@@ -46,6 +52,7 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.CANDY_CANE_BRICKS_GREEN_FENCE_GATE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_FENCE_GATE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_YELLOW_FENCE_GATE.get(),
+                        SNSBlocks.CANDY_CANE_PLANK_FENCE_GATE.get(),
                         SNSBlocks.HUMBUG_BLOCK_FENCE_GATE.get(),
                         SNSBlocks.HUMBUG_BRICKS_FENCE_GATE.get(),
                         SNSBlocks.HARDENED_HUMBUG_BLOCK_FENCE_GATE.get(),
@@ -56,23 +63,18 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.TOOTHPASTE_BRICKS_FENCE_GATE.get(),
                         SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_FENCE_GATE.get()
                 );
-//WALLS
-        this.tag(BlockTags.WALLS)
-                .add(SNSBlocks.CANDY_CANE_BLOCK_WALL.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_WALL.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_BLUE_WALL.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_GREEN_WALL.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_WALL.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_YELLOW_WALL.get(),
-                        SNSBlocks.HUMBUG_BLOCK_WALL.get(),
-                        SNSBlocks.HUMBUG_BRICKS_WALL.get(),
-                        SNSBlocks.HARDENED_HUMBUG_BLOCK_WALL.get(),
-                        SNSBlocks.MINT_BLOCK_WALL.get(),
-                        SNSBlocks.MINT_BRICKS_WALL.get(),
-                        SNSBlocks.HARDENED_MINT_BLOCK_WALL.get(),
-                        SNSBlocks.TOOTHPASTE_BLOCK_WALL.get(),
-                        SNSBlocks.TOOTHPASTE_BRICKS_WALL.get(),
-                        SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get()
+
+        this.tag(BlockTags.FLOWERS)
+                .add(SNSBlocks.CANDY_CANE_FLOWER.get()
+
+                );
+
+        this.tag(BlockTags.LEAVES)
+                .add(SNSBlocks.CANDY_CANE_LEAVES.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(SNSBlocks.CANDY_CANE_STALK.get(),
+                SNSBlocks.STRIPPED_CANDY_CANE_STALK.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
@@ -96,10 +98,9 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_SLAB.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_STAIRS.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_WALL.get()
-
-
-
                 );
+
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(SNSBlocks.CANDY_CANE_BLOCK.get(),
@@ -117,21 +118,30 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_SLAB.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_STAIRS.get()
-
-
                 );
 
-        this.tag(BlockTags.DIRT)
-                .add(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get()
-
+        this.tag(BlockTags.PLANKS)
+                .add(SNSBlocks.CANDY_CANE_PLANKS.get()
                 );
 
-        this.tag(BlockTags.FLOWERS)
-                .add(SNSBlocks.CANDY_CANE_FLOWER.get()
-
+        this.tag(BlockTags.WALLS)
+                .add(SNSBlocks.CANDY_CANE_BLOCK_WALL.get(),
+                        SNSBlocks.CANDY_CANE_BRICKS_WALL.get(),
+                        SNSBlocks.CANDY_CANE_BRICKS_BLUE_WALL.get(),
+                        SNSBlocks.CANDY_CANE_BRICKS_GREEN_WALL.get(),
+                        SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_WALL.get(),
+                        SNSBlocks.CANDY_CANE_BRICKS_YELLOW_WALL.get(),
+                        SNSBlocks.CANDY_CANE_PLANK_WALL.get(),
+                        SNSBlocks.HUMBUG_BLOCK_WALL.get(),
+                        SNSBlocks.HUMBUG_BRICKS_WALL.get(),
+                        SNSBlocks.HARDENED_HUMBUG_BLOCK_WALL.get(),
+                        SNSBlocks.MINT_BLOCK_WALL.get(),
+                        SNSBlocks.MINT_BRICKS_WALL.get(),
+                        SNSBlocks.HARDENED_MINT_BLOCK_WALL.get(),
+                        SNSBlocks.TOOTHPASTE_BLOCK_WALL.get(),
+                        SNSBlocks.TOOTHPASTE_BRICKS_WALL.get(),
+                        SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get()
                 );
-
-        this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
 
     }
 

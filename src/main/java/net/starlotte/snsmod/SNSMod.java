@@ -2,6 +2,7 @@ package net.starlotte.snsmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -22,6 +23,7 @@ import net.starlotte.snsmod.particle.SNSParticles;
 import net.starlotte.snsmod.recipe.SNSRecipes;
 import net.starlotte.snsmod.screen.CandyCaneFurnaceScreen;
 import net.starlotte.snsmod.screen.SNSMenuTypes;
+import net.starlotte.snsmod.util.SNSWoodTypes;
 import org.slf4j.Logger;
 
 @Mod(SNSMod.MOD_ID)
@@ -49,6 +51,7 @@ public class SNSMod {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_SAPLING.getId(), SNSBlocks.POTTED_CANDY_CANE_SAPLING);
 
         });
     }
@@ -68,7 +71,7 @@ public class SNSMod {
             event.enqueueWork(() -> {
 
                 MenuScreens.register(SNSMenuTypes.CANDY_CANE_FURNACE_MENU.get(), CandyCaneFurnaceScreen::new);
-
+                Sheets.addWoodType(SNSWoodTypes.CANDY_CANE);
             });
         }
     }

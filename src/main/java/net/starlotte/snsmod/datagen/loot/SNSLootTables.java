@@ -5,6 +5,7 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 import net.starlotte.snsmod.block.SNSBlocks;
+import net.starlotte.snsmod.item.SNSItems;
 
 import java.util.Set;
 
@@ -25,8 +26,16 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.dropSelf(SNSBlocks.CANDY_CANE_BLOCK_STAIRS.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_BLOCK_WALL.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get());
+        this.add(SNSBlocks.CANDY_CANE_LEAVES.get(), block -> createLeavesDrops(block, SNSBlocks.CANDY_CANE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(SNSBlocks.CANDY_CANE_PLANKS.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_PLANK_BUTTON.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_PLANK_FENCE.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_PLANK_FENCE_GATE.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_PLANK_PRESSURE_PLATE.get());
+        this.add(SNSBlocks.CANDY_CANE_PLANK_SLAB.get(), block -> createSlabItemTable(SNSBlocks.CANDY_CANE_PLANK_SLAB.get()));
+        this.dropSelf(SNSBlocks.CANDY_CANE_PLANK_STAIRS.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_PLANK_WALL.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_STALK.get());
-        this.dropSelf(SNSBlocks.CANDY_CANE_STALK_PLANKS.get());
         this.dropSelf(SNSBlocks.STRIPPED_CANDY_CANE_STALK.get());
 //CANDY_CANE_BRICKS
         this.dropSelf(SNSBlocks.CANDY_CANE_BRICKS.get());
@@ -166,6 +175,15 @@ public class SNSLootTables extends BlockLootSubProvider {
 //BLOCK ENTITIES
 // FURNACES
         this.dropSelf(SNSBlocks.CANDY_CANE_FURNACE.get());
+//SIGNS
+        this.add(SNSBlocks.CANDY_CANE_SIGN.get(), block ->
+                createSingleItemTable(SNSItems.CANDY_CANE_SIGN.get()));
+        this.add(SNSBlocks.CANDY_CANE_WALL_SIGN.get(), block ->
+                createSingleItemTable(SNSItems.CANDY_CANE_SIGN.get()));
+        this.add(SNSBlocks.CANDY_CANE_HANGING_SIGN.get(), block ->
+                createSingleItemTable(SNSItems.CANDY_CANE_HANGING_SIGN.get()));
+        this.add(SNSBlocks.CANDY_CANE_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(SNSItems.CANDY_CANE_HANGING_SIGN.get()));
     }
 
     @Override

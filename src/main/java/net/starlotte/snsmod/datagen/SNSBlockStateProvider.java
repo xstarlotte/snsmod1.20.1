@@ -72,6 +72,15 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) SNSBlocks.CANDY_CANE_BRICKS_YELLOW_SLAB.get(), blockTexture(SNSBlocks.CANDY_CANE_BRICKS_YELLOW.get()), blockTexture(SNSBlocks.CANDY_CANE_BRICKS_YELLOW.get()));
         stairsBlock((StairBlock) SNSBlocks.CANDY_CANE_BRICKS_YELLOW_STAIRS.get(), blockTexture(SNSBlocks.CANDY_CANE_BRICKS_YELLOW.get()));
         wallBlock((WallBlock) SNSBlocks.CANDY_CANE_BRICKS_YELLOW_WALL.get(), blockTexture(SNSBlocks.CANDY_CANE_BRICKS_YELLOW.get()));
+//CANDY CANE PLANKS
+        blockWithItem(SNSBlocks.CANDY_CANE_PLANKS);
+        buttonBlock((ButtonBlock) SNSBlocks.CANDY_CANE_PLANK_BUTTON.get(), blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()));
+        fenceBlock((FenceBlock) SNSBlocks.CANDY_CANE_PLANK_FENCE.get(), blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) SNSBlocks.CANDY_CANE_PLANK_FENCE_GATE.get(), blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) SNSBlocks.CANDY_CANE_PLANK_PRESSURE_PLATE.get(), blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()));
+        slabBlock((SlabBlock) SNSBlocks.CANDY_CANE_PLANK_SLAB.get(), blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()), blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()));
+        stairsBlock((StairBlock) SNSBlocks.CANDY_CANE_PLANK_STAIRS.get(), blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()));
+        wallBlock((WallBlock) SNSBlocks.CANDY_CANE_PLANK_WALL.get(), blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()));
  //HUMBUG
         blockWithItem(SNSBlocks.HUMBUG_BLOCK);
         buttonBlock((ButtonBlock) SNSBlocks.HUMBUG_BLOCK_BUTTON.get(), blockTexture(SNSBlocks.HUMBUG_BLOCK.get()));
@@ -160,11 +169,6 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_PRESSURE_PLATE);
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_SLAB);
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_STAIRS);
-        simpleBlockWithItem(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get(), models().orientableWithBottom(SNSBlocks.CANDY_CANE_GRASS_BLOCK.getId().getPath(),
-                modLoc("block/candy_cane_grass_block_side"),
-                modLoc("block/candy_cane_grass_block_side"),
-                new ResourceLocation("snsmod:block/candy_cane_grass_block_bottom"),
-                modLoc("block/candy_cane_grass_block_top")));
 
         blockItem(SNSBlocks.CANDY_CANE_BRICKS_FENCE_GATE);
         blockItem(SNSBlocks.CANDY_CANE_BRICKS_PRESSURE_PLATE);
@@ -190,6 +194,11 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_PRESSURE_PLATE);
         blockItem(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_SLAB);
         blockItem(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_STAIRS);
+
+        blockItem(SNSBlocks.CANDY_CANE_PLANK_FENCE_GATE);
+        blockItem(SNSBlocks.CANDY_CANE_PLANK_PRESSURE_PLATE);
+        blockItem(SNSBlocks.CANDY_CANE_PLANK_SLAB);
+        blockItem(SNSBlocks.CANDY_CANE_PLANK_STAIRS);
 
         blockItem(SNSBlocks.HUMBUG_BLOCK_FENCE_GATE);
         blockItem(SNSBlocks.HUMBUG_BLOCK_PRESSURE_PLATE);
@@ -238,27 +247,28 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS);
 
 //FLORA
+        saplingBlock(SNSBlocks.CANDY_CANE_SAPLING);
         simpleBlock(SNSBlocks.CANDY_CANE_FLOWER.get(),
                 models().cross(blockTexture(SNSBlocks.CANDY_CANE_FLOWER.get()).getPath(), blockTexture(SNSBlocks.CANDY_CANE_FLOWER.get())).renderType("cutout"));
 
-//WOOD
-        axisBlock((RotatedPillarBlock) SNSBlocks.STRIPPED_CANDY_CANE_STALK.get(), models().sideBottomTop(SNSBlocks.CANDY_CANE_STALK.getId().getPath(),
-                modLoc("block/stripped_candy_cane_stalk"),
-                modLoc("block/stripped_candy_cane_stalk_top"),
-                modLoc("block/stripped_candy_cane_stalk_bottom")));
-        logBlock((RotatedPillarBlock) SNSBlocks.CANDY_CANE_STALK.get(), models().sideBottomTop(SNSBlocks.CANDY_CANE_STALK.getId().getPath(),
-                modLoc("block/candy_cane_stalk"),
-                modLoc("block/candy_cane_stalk_top"),
-                modLoc("block/candy_cane_stalk_bottom")));
-//GRASS
+//MULTI TEXTURE BLOCKS
         simpleBlockWithItem(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get(), models().orientableWithBottom(SNSBlocks.CANDY_CANE_GRASS_BLOCK.getId().getPath(),
                 modLoc("block/candy_cane_grass_block_side"),
                 modLoc("block/candy_cane_grass_block_side"),
                 new ResourceLocation("snsmod:block/candy_cane_grass_block_bottom"),
                 modLoc("block/candy_cane_grass_block_top")));
-
-
-        logBlock(((RotatedPillarBlock) SNSBlocks.CANDY_CANE_STALK.get()));
+//SIGN
+        hangingSignBlock(SNSBlocks.CANDY_CANE_HANGING_SIGN.get(), SNSBlocks.CANDY_CANE_WALL_HANGING_SIGN.get(),
+                blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()));
+        signBlock(((StandingSignBlock) SNSBlocks.CANDY_CANE_SIGN.get()), ((WallSignBlock) SNSBlocks.CANDY_CANE_WALL_SIGN.get()),
+                blockTexture(SNSBlocks.CANDY_CANE_PLANKS.get()));
+//TREE
+        axisBlock((RotatedPillarBlock) SNSBlocks.STRIPPED_CANDY_CANE_STALK.get(), new ResourceLocation(SNSMod.MOD_ID, "block/stripped_candy_cane_stalk"),
+               new ResourceLocation(SNSMod.MOD_ID, "block/stripped_candy_cane_stalk_top"));
+        blockItem(SNSBlocks.CANDY_CANE_STALK);
+        blockItem(SNSBlocks.STRIPPED_CANDY_CANE_STALK);
+        leavesBlock(SNSBlocks.CANDY_CANE_LEAVES);
+        logBlock((RotatedPillarBlock) SNSBlocks.CANDY_CANE_STALK.get());
 
     }
 
@@ -274,7 +284,35 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 
-    private void sideBottomTop(RegistryObject<Block> blockRegistryObject, String appendix) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("snsmod:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
     }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().cubeAll(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
+    }
+   /* @Override
+    private void sideBottomTop(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    } */
 }

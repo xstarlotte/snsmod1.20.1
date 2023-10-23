@@ -8,35 +8,42 @@
   "block.snsmod.candy_cane_block_slab": "Candy Cane Slab",
   "block.snsmod.candy_cane_block_stairs": "Candy Cane Stairs",
   "block.snsmod.candy_cane_block_wall": "Candy Cane Wall",
-
-  "block.snsmod.candy_cane_grass_block": "Candy Cane Grass Block",
+  "block.snsmod.candy_cane_leaves": "Candy Cane Leaves",
+  "block.snsmod.candy_cane_planks": "Candy Cane Plank",
+  "block.snsmod.candy_cane_plank_button": "Candy Cane Plank Button",
+  "block.snsmod.candy_cane_plank_fence": "Candy Cane Plank Fence",
+  "block.snsmod.candy_cane_plank_fence_gate": "Candy Cane Plank Fence Gate",
+  "block.snsmod.candy_cane_plank_pressure_plate": "Candy Cane Plank Pressure Plate",
+  "block.snsmod.candy_cane_plank_slab": "Candy Cane Plank Slab",
+  "block.snsmod.candy_cane_plank_stairs": "Candy Cane Plank Stairs",
+  "block.snsmod.candy_cane_plank_wall": "Candy Cane Plank Wall",
 
   "block.snsmod.candy_cane_bricks": "Candy Cane Bricks",
   "block.snsmod.candy_cane_bricks_button": "Candy Cane Bricks Button",
   "block.snsmod.candy_cane_bricks_fence": "Candy Cane Bricks Fence",
   "block.snsmod.candy_cane_bricks_fence_gate": "Candy Cane Bricks Fence Gate",
   "block.snsmod.candy_cane_bricks_pressure_plate": "Candy Cane Bricks Pressure Plate",
-  "block.snsmod.candy_cane_bricks_slab": "Candy Bricks Cane Slab",
-  "block.snsmod.candy_cane_bricks_stairs": "Candy Bricks Cane Stairs",
-  "block.snsmod.candy_cane_bricks_wall": "Candy Bricks Cane Wall",
+  "block.snsmod.candy_cane_bricks_slab": "Candy Cane Bricks Slab",
+  "block.snsmod.candy_cane_bricks_stairs": "Candy Cane Bricks Stairs",
+  "block.snsmod.candy_cane_bricks_wall": "Candy Cane Bricks Wall",
 
   "block.snsmod.candy_cane_bricks_blue": "Blue Candy Cane Bricks",
   "block.snsmod.candy_cane_bricks_blue_button": "Blue Candy Cane Bricks Button",
   "block.snsmod.candy_cane_bricks_blue_fence": "Blue Candy Cane Bricks Fence",
   "block.snsmod.candy_cane_bricks_blue_fence_gate": "Blue Candy Cane Bricks Fence Gate",
   "block.snsmod.candy_cane_bricks_blue_pressure_plate": "Blue Candy Cane Bricks Pressure Plate",
-  "block.snsmod.candy_cane_bricks_blue_slab": "Blue Candy Bricks Cane Slab",
-  "block.snsmod.candy_cane_bricks_blue_stairs": "Blue Candy Bricks Cane Stairs",
-  "block.snsmod.candy_cane_bricks_blue_wall": "Blue Candy Bricks Cane Wall",
+  "block.snsmod.candy_cane_bricks_blue_slab": "Blue Candy Cane Bricks Slab",
+  "block.snsmod.candy_cane_bricks_blue_stairs": "Blue Candy Cane Bricks Stairs",
+  "block.snsmod.candy_cane_bricks_blue_wall": "Blue Candy Cane Bricks Wall",
 
   "block.snsmod.candy_cane_bricks_green": "Green Candy Cane Bricks",
   "block.snsmod.candy_cane_bricks_green_button": "Green Candy Cane Bricks Button",
   "block.snsmod.candy_cane_bricks_green_fence": "Green Candy Cane Bricks Fence",
   "block.snsmod.candy_cane_bricks_green_fence_gate": "Green Candy Cane Bricks Fence Gate",
   "block.snsmod.candy_cane_bricks_green_pressure_plate": "Green Candy Cane Bricks Pressure Plate",
-  "block.snsmod.candy_cane_bricks_green_slab": "Green Candy Bricks Cane Slab",
-  "block.snsmod.candy_cane_bricks_green_stairs": "Green Candy Bricks Cane Stairs",
-  "block.snsmod.candy_cane_bricks_green_wall": "Green Candy Bricks Cane Wall",
+  "block.snsmod.candy_cane_bricks_green_slab": "Green Candy Cane Bricks Slab",
+  "block.snsmod.candy_cane_bricks_green_stairs": "Green Candy Cane Bricks Stairs",
+  "block.snsmod.candy_cane_bricks_green_wall": "Green Candy Cane Bricks Wall",
 
   "block.snsmod.candy_cane_bricks_light_blue": "Light blue Candy Cane Bricks",
   "block.snsmod.candy_cane_bricks_light_blue_button": "Light blue Candy Cane Bricks Button",
@@ -60,8 +67,14 @@
 
   "block.snsmod.candy_cane_furnace": "Candy Cane Furnace",
 
+  "block.snsmod.candy_cane_grass_block": "Candy Cane Grass Block",
+
+  "block.snsmod.candy_cane_hanging_sign": "Candy Cane Hanging Sign",
+
   "block.snsmod.candy_cane_sapling": "Candy Cane Sapling",
-  "block.snsmod.candy_cane_stalk_planks": "Candy Cane Planks",
+
+  "block.snsmod.candy_cane_sign": "Candy Cane Sign",
+
   "block.snsmod.candy_cane_stalk": "Candy Cane Stalk",
   "block.snsmod.stripped_candy_cane_stalk": "Stripped Candy Cane Stalk",
 
@@ -162,6 +175,7 @@
   "painting.snsmod.candy_cane.author": "Starlotte",
 
   "snstab.block_tab": "Blocks - Sweet Not Savoury",
+  "snstab.decoration_tab": "Decorations - Sweet Not Savoury",
   "snstab.food_tab": "Food - Sweet Not Savoury",
   "snstab.misc_tab": "Misc - Sweet Not Savoury"
 

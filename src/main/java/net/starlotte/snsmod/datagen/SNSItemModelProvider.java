@@ -27,6 +27,7 @@ public class SNSItemModelProvider extends ItemModelProvider {
         buttonItem(SNSBlocks.CANDY_CANE_BRICKS_GREEN_BUTTON, SNSBlocks.CANDY_CANE_BRICKS_GREEN);
         buttonItem(SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_BUTTON, SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE);
         buttonItem(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_BUTTON, SNSBlocks.CANDY_CANE_BRICKS_YELLOW);
+        buttonItem(SNSBlocks.CANDY_CANE_PLANK_BUTTON, SNSBlocks.CANDY_CANE_PLANKS);
         buttonItem(SNSBlocks.HUMBUG_BLOCK_BUTTON, SNSBlocks.HUMBUG_BLOCK);
         buttonItem(SNSBlocks.HUMBUG_BRICKS_BUTTON, SNSBlocks.HUMBUG_BRICKS);
         buttonItem(SNSBlocks.HARDENED_HUMBUG_BLOCK_BUTTON, SNSBlocks.HARDENED_HUMBUG_BLOCK);
@@ -45,6 +46,7 @@ public class SNSItemModelProvider extends ItemModelProvider {
         fenceItem(SNSBlocks.CANDY_CANE_BRICKS_GREEN_FENCE, SNSBlocks.CANDY_CANE_BRICKS_GREEN);
         fenceItem(SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_FENCE, SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE);
         fenceItem(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_FENCE, SNSBlocks.CANDY_CANE_BRICKS_YELLOW);
+        fenceItem(SNSBlocks.CANDY_CANE_PLANK_FENCE, SNSBlocks.CANDY_CANE_PLANKS);
         fenceItem(SNSBlocks.HUMBUG_BLOCK_FENCE, SNSBlocks.HUMBUG_BLOCK);
         fenceItem(SNSBlocks.HUMBUG_BRICKS_FENCE, SNSBlocks.HUMBUG_BRICKS);
         fenceItem(SNSBlocks.HARDENED_HUMBUG_BLOCK_FENCE, SNSBlocks.HARDENED_HUMBUG_BLOCK);
@@ -61,6 +63,7 @@ public class SNSItemModelProvider extends ItemModelProvider {
         wallItem(SNSBlocks.CANDY_CANE_BRICKS_GREEN_WALL, SNSBlocks.CANDY_CANE_BRICKS_GREEN);
         wallItem(SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_WALL, SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE);
         wallItem(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_WALL, SNSBlocks.CANDY_CANE_BRICKS_YELLOW);
+        wallItem(SNSBlocks.CANDY_CANE_PLANK_WALL, SNSBlocks.CANDY_CANE_PLANKS);
         wallItem(SNSBlocks.HUMBUG_BLOCK_WALL, SNSBlocks.HUMBUG_BLOCK);
         wallItem(SNSBlocks.HUMBUG_BRICKS_WALL, SNSBlocks.HUMBUG_BRICKS);
         wallItem(SNSBlocks.HARDENED_HUMBUG_BLOCK_WALL, SNSBlocks.HARDENED_HUMBUG_BLOCK);
@@ -72,13 +75,17 @@ public class SNSItemModelProvider extends ItemModelProvider {
         wallItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL, SNSBlocks.HARDENED_TOOTHPASTE_BLOCK);
 //SIMPLE ITEMS
         simpleItem(SNSItems.CANDY_CANE);
+        simpleItem(SNSItems.CANDY_CANE_HANGING_SIGN);
+        simpleItem(SNSItems.CANDY_CANE_SIGN);
         simpleItem(SNSItems.CANDY_CANE_SUGAR);
         simpleItem(SNSItems.MINT_CHOCOLATE_BALL);
         simpleItem(SNSItems.MINT_IMPERIAL);
         simpleItem(SNSItems.MINT_MARSHMALLOW);
         simpleItem(SNSItems.TOOTHPASTE);
-//SIMPLE BLOCK ITEMS
+//FLORA
         simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER);
+        saplingItem(SNSBlocks.CANDY_CANE_SAPLING);
+
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
@@ -89,6 +96,12 @@ public class SNSItemModelProvider extends ItemModelProvider {
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture",  new ResourceLocation(SNSMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(SNSMod.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {

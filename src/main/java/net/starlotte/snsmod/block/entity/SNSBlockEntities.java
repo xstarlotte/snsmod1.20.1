@@ -19,6 +19,16 @@ public class SNSBlockEntities {
                     BlockEntityType.Builder.of(CandyCaneFurnaceBlockEntity::new,
                             SNSBlocks.CANDY_CANE_FURNACE.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<SNSSignBlockEntity>> SNS_SIGN =
+            BLOCK_ENTITIES.register("sns_sign", () ->
+                    BlockEntityType.Builder.of(SNSSignBlockEntity::new,
+                            SNSBlocks.CANDY_CANE_SIGN.get(), SNSBlocks.CANDY_CANE_WALL_SIGN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<SNSHangingSignBlockEntity>> SNS_HANGING_SIGN =
+            BLOCK_ENTITIES.register("sns_hanging_sign", () ->
+                    BlockEntityType.Builder.of(SNSHangingSignBlockEntity::new,
+                            SNSBlocks.CANDY_CANE_HANGING_SIGN.get(), SNSBlocks.CANDY_CANE_WALL_HANGING_SIGN.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

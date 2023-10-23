@@ -16,9 +16,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.starlotte.snsmod.SNSMod;
-import net.starlotte.snsmod.block.custom.CandyCaneFurnaceBlock;
-import net.starlotte.snsmod.block.custom.SNSFlammableRotatedPillarBlock;
+import net.starlotte.snsmod.block.custom.*;
 import net.starlotte.snsmod.item.SNSItems;
+import net.starlotte.snsmod.util.SNSWoodTypes;
+import net.starlotte.snsmod.worldgen.tree.CandyCaneTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -35,14 +36,28 @@ public class SNSBlocks {
     public static final RegistryObject<Block> CANDY_CANE_BLOCK_STAIRS = registerBlock("candy_cane_block_stairs", () -> new StairBlock(() -> SNSBlocks.CANDY_CANE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CANDY_CANE_BLOCK_WALL = registerBlock("candy_cane_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> CANDY_CANE_GRASS_BLOCK = registerBlock("candy_cane_grass_block", () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
-    public static final RegistryObject<Block> CANDY_CANE_STALK = registerBlock("candy_cane_stalk", () -> new SNSFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LOG)));
-    public static final RegistryObject<Block> CANDY_CANE_STALK_PLANKS = registerBlock("candy_cane_stalk_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)){
+    public static final RegistryObject<Block> CANDY_CANE_LEAVES = registerBlock("candy_cane_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LEAVES)){
+        @Override
+        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {return true;}
+        @Override
+        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {return 60;}
+        @Override
+        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {return 30;}});
+    public static final RegistryObject<Block> CANDY_CANE_PLANKS = registerBlock("candy_cane_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {return true;}
         @Override
         public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {return 20;}
         @Override
         public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {return 5;}});
+    public static final RegistryObject<Block> CANDY_CANE_PLANK_BUTTON = registerBlock("candy_cane_plank_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_BUTTON).sound(SoundType.WOOD), BlockSetType.CHERRY, 10, true));
+    public static final RegistryObject<Block> CANDY_CANE_PLANK_FENCE = registerBlock("candy_cane_plank_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
+    public static final RegistryObject<Block> CANDY_CANE_PLANK_FENCE_GATE = registerBlock("candy_cane_plank_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> CANDY_CANE_PLANK_PRESSURE_PLATE = registerBlock("candy_cane_plank_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.CHERRY_PRESSURE_PLATE).sound(SoundType.WOOD), BlockSetType.CHERRY));
+    public static final RegistryObject<Block> CANDY_CANE_PLANK_SLAB = registerBlock("candy_cane_plank_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_SLAB).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> CANDY_CANE_PLANK_STAIRS = registerBlock("candy_cane_plank_stairs", () -> new StairBlock(() -> SNSBlocks.CANDY_CANE_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CHERRY_STAIRS).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> CANDY_CANE_PLANK_WALL = registerBlock("candy_cane_plank_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
+    public static final RegistryObject<Block> CANDY_CANE_STALK = registerBlock("candy_cane_stalk", () -> new SNSFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LOG)));
     public static final RegistryObject<Block> STRIPPED_CANDY_CANE_STALK = registerBlock("stripped_candy_cane_stalk", () -> new SNSFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CHERRY_LOG)));
     //CANDY_CANE_BRICK
     public static final RegistryObject<Block> CANDY_CANE_BRICKS = registerBlock("candy_cane_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
@@ -178,12 +193,21 @@ public class SNSBlocks {
         () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> POTTED_CANDY_CANE_FLOWER = BLOCKS.register("potted_candy_cane_flower",
             () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), CANDY_CANE_FLOWER, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
-    public static final RegistryObject<Block> CANDY_CANE_SAPLING = registerBlock("candy_cane_sapling", () -> new SaplingBlock(null, (BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING))));
+    public static final RegistryObject<Block> CANDY_CANE_SAPLING = registerBlock("candy_cane_sapling", () -> new SaplingBlock(new CandyCaneTreeGrower(), (BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING))));
     public static final RegistryObject<Block> POTTED_CANDY_CANE_SAPLING = BLOCKS.register("potted_candy_cane_sapling",
             () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), CANDY_CANE_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_CHERRY_SAPLING)));
 //BLOCK ENTITIES
     //FURNACES
-public static final RegistryObject<Block> CANDY_CANE_FURNACE = registerBlock("candy_cane_furnace", () -> new CandyCaneFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> CANDY_CANE_FURNACE = registerBlock("candy_cane_furnace", () -> new CandyCaneFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    //SIGNS
+    public static final RegistryObject<Block> CANDY_CANE_SIGN = BLOCKS.register("candy_cane_sign",
+            () -> new SNSStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_SIGN), SNSWoodTypes.CANDY_CANE));
+    public static final RegistryObject<Block> CANDY_CANE_WALL_SIGN = BLOCKS.register("candy_cane_wall_sign",
+            () -> new SNSWallSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WALL_SIGN), SNSWoodTypes.CANDY_CANE));
+    public static final RegistryObject<Block> CANDY_CANE_HANGING_SIGN = BLOCKS.register("candy_cane_hanging_sign",
+            () -> new SNSHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_HANGING_SIGN), SNSWoodTypes.CANDY_CANE));
+    public static final RegistryObject<Block> CANDY_CANE_WALL_HANGING_SIGN = BLOCKS.register("candy_cane_wall_hanging_sign",
+            () -> new SNSWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WALL_HANGING_SIGN), SNSWoodTypes.CANDY_CANE));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

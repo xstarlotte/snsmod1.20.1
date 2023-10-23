@@ -13,15 +13,23 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.starlotte.snsmod.SNSMod;
 
 public class SNSBiomeModifiers {
+//FLORA
+public static final ResourceKey<BiomeModifier> ADD_FLOWER_CANDY_CANE = registerKey("add_flower_candy_cane");
+//TREES
     public static final ResourceKey<BiomeModifier> ADD_TREE_CANDY_CANE = registerKey("add_tree_candy_cane");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
-
+//FLORA
+        context.register(ADD_FLOWER_CANDY_CANE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_COLD),
+                HolderSet.direct(placedFeatures.getOrThrow(SNSPlacedFeatures.CANDY_CANE_FLOWER_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+//TREES
         context.register(ADD_TREE_CANDY_CANE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_COLD),
-                HolderSet.direct(placedFeatures.getOrThrow(SNSPlacedFeatures.CANDY_CANE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(SNSPlacedFeatures.CANDY_CANE_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
 

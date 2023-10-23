@@ -2,12 +2,15 @@ package net.starlotte.snsmod.worldgen;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
@@ -17,10 +20,21 @@ import net.starlotte.snsmod.SNSMod;
 import net.starlotte.snsmod.block.SNSBlocks;
 
 public class SNSConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CANDY_CANE_KEY = registerKey("candy_cane");
+
+//FLORA
+public static final ResourceKey<ConfiguredFeature<?, ?>> CANDY_CANE_FLOWER_KEY = registerKey("candy_cane_flower");
+
+//TREES
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CANDY_CANE_TREE_KEY = registerKey("candy_cane_tree");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        register(context, CANDY_CANE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+//FLORA
+        register(context, CANDY_CANE_FLOWER_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(SNSBlocks.CANDY_CANE_FLOWER.get())))));
+
+//TREES
+        register(context, CANDY_CANE_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(SNSBlocks.CANDY_CANE_STALK.get()),
                 new StraightTrunkPlacer(5, 4, 3),
                 BlockStateProvider.simple(SNSBlocks.CANDY_CANE_LEAVES.get()),

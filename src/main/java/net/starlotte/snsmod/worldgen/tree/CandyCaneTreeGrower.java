@@ -11,6 +11,6 @@ public class CandyCaneTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-        return SNSConfiguredFeatures.CANDY_CANE_KEY;
+        return SNSConfiguredFeatures.CANDY_CANE_TREE_KEY;
     }
 }

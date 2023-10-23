@@ -9,20 +9,25 @@ import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 import net.starlotte.snsmod.SNSMod;
 import net.starlotte.snsmod.block.SNSBlocks;
 
 import java.util.List;
 
 public class SNSPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> CANDY_CANE_PLACED_KEY = registerKey("candy_cane_placed");
+//FLORA
+    public static final ResourceKey<PlacedFeature> CANDY_CANE_FLOWER_PLACED_KEY = registerKey("candy_cane_flower_placed");
+//TREES
+    public static final ResourceKey<PlacedFeature> CANDY_CANE_TREE_PLACED_KEY = registerKey("candy_cane_tree_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
-
-        register(context, CANDY_CANE_PLACED_KEY, configuredFeatures.getOrThrow(SNSConfiguredFeatures.CANDY_CANE_KEY),
+//FLORA
+        register(context, CANDY_CANE_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(SNSConfiguredFeatures.CANDY_CANE_FLOWER_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+//TREES
+        register(context, CANDY_CANE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(SNSConfiguredFeatures.CANDY_CANE_TREE_KEY),
                 //count = 3 placed on average, 0.1f = 10% chance of 2 (final number) more being spawned additionally.
                 //the 2nd MUST be an integer (must be a whole number when divided by 1, for example; 1/0.1 = 10 (whole number))
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),

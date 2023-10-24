@@ -34,6 +34,7 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_FENCE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_YELLOW_FENCE.get(),
                         SNSBlocks.CANDY_CANE_PLANK_FENCE.get(),
+                        SNSBlocks.CANDY_CANE_STONE_FENCE.get(),
                         SNSBlocks.HUMBUG_BLOCK_FENCE.get(),
                         SNSBlocks.HUMBUG_BRICKS_FENCE.get(),
                         SNSBlocks.HARDENED_HUMBUG_BLOCK_FENCE.get(),
@@ -53,6 +54,7 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_FENCE_GATE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_YELLOW_FENCE_GATE.get(),
                         SNSBlocks.CANDY_CANE_PLANK_FENCE_GATE.get(),
+                        SNSBlocks.CANDY_CANE_STONE_FENCE_GATE.get(),
                         SNSBlocks.HUMBUG_BLOCK_FENCE_GATE.get(),
                         SNSBlocks.HUMBUG_BRICKS_FENCE_GATE.get(),
                         SNSBlocks.HARDENED_HUMBUG_BLOCK_FENCE_GATE.get(),
@@ -65,7 +67,15 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                 );
 
         this.tag(BlockTags.FLOWERS)
-                .add(SNSBlocks.CANDY_CANE_FLOWER.get()
+                .add(SNSBlocks.CANDY_CANE_BUSH.get(),
+                SNSBlocks.CANDY_CANE_CARNATION.get(),
+                SNSBlocks.CANDY_CANE_CARNATIONS.get(),
+                SNSBlocks.CANDY_CANE_FLOWER.get(),
+                SNSBlocks.CANDY_CANE_FLOWER_2.get(),
+                SNSBlocks.CANDY_CANE_FLOWER_3.get(),
+                SNSBlocks.CANDY_CANE_FLOWER_4.get(),
+                SNSBlocks.CANDY_CANE_GRASS.get(),
+                SNSBlocks.CANDY_CANE_GRASS_LONG.get()
 
                 );
 
@@ -97,7 +107,11 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_SLAB.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_STAIRS.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_WALL.get()
+                        SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_WALL.get(),
+                        SNSBlocks.CANDY_CANE_STONE.get(),
+                        SNSBlocks.CANDY_CANE_STONE_SLAB.get(),
+                        SNSBlocks.CANDY_CANE_STONE_STAIRS.get(),
+                        SNSBlocks.CANDY_CANE_STONE_WALL.get()
                 );
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
@@ -105,19 +119,7 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(SNSBlocks.CANDY_CANE_BLOCK.get(),
                         SNSBlocks.CANDY_CANE_BLOCK_SLAB.get(),
-                        SNSBlocks.CANDY_CANE_BLOCK_STAIRS.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_SLAB.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_STAIRS.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_BLUE.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_BLUE_SLAB.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_BLUE_STAIRS.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_GREEN.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_GREEN_SLAB.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_GREEN_STAIRS.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_SLAB.get(),
-                        SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_STAIRS.get()
+                        SNSBlocks.CANDY_CANE_BLOCK_STAIRS.get()
                 );
 
         this.tag(BlockTags.PLANKS)
@@ -132,6 +134,7 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_WALL.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_YELLOW_WALL.get(),
                         SNSBlocks.CANDY_CANE_PLANK_WALL.get(),
+                        SNSBlocks.CANDY_CANE_STONE_WALL.get(),
                         SNSBlocks.HUMBUG_BLOCK_WALL.get(),
                         SNSBlocks.HUMBUG_BRICKS_WALL.get(),
                         SNSBlocks.HARDENED_HUMBUG_BLOCK_WALL.get(),

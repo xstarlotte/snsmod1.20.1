@@ -28,6 +28,7 @@ public class SNSItemModelProvider extends ItemModelProvider {
         buttonItem(SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_BUTTON, SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE);
         buttonItem(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_BUTTON, SNSBlocks.CANDY_CANE_BRICKS_YELLOW);
         buttonItem(SNSBlocks.CANDY_CANE_PLANK_BUTTON, SNSBlocks.CANDY_CANE_PLANKS);
+        buttonItem(SNSBlocks.CANDY_CANE_STONE_BUTTON, SNSBlocks.CANDY_CANE_STONE);
         buttonItem(SNSBlocks.HUMBUG_BLOCK_BUTTON, SNSBlocks.HUMBUG_BLOCK);
         buttonItem(SNSBlocks.HUMBUG_BRICKS_BUTTON, SNSBlocks.HUMBUG_BRICKS);
         buttonItem(SNSBlocks.HARDENED_HUMBUG_BLOCK_BUTTON, SNSBlocks.HARDENED_HUMBUG_BLOCK);
@@ -47,6 +48,7 @@ public class SNSItemModelProvider extends ItemModelProvider {
         fenceItem(SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_FENCE, SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE);
         fenceItem(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_FENCE, SNSBlocks.CANDY_CANE_BRICKS_YELLOW);
         fenceItem(SNSBlocks.CANDY_CANE_PLANK_FENCE, SNSBlocks.CANDY_CANE_PLANKS);
+        fenceItem(SNSBlocks.CANDY_CANE_STONE_FENCE, SNSBlocks.CANDY_CANE_STONE);
         fenceItem(SNSBlocks.HUMBUG_BLOCK_FENCE, SNSBlocks.HUMBUG_BLOCK);
         fenceItem(SNSBlocks.HUMBUG_BRICKS_FENCE, SNSBlocks.HUMBUG_BRICKS);
         fenceItem(SNSBlocks.HARDENED_HUMBUG_BLOCK_FENCE, SNSBlocks.HARDENED_HUMBUG_BLOCK);
@@ -64,6 +66,7 @@ public class SNSItemModelProvider extends ItemModelProvider {
         wallItem(SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE_WALL, SNSBlocks.CANDY_CANE_BRICKS_LIGHT_BLUE);
         wallItem(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_WALL, SNSBlocks.CANDY_CANE_BRICKS_YELLOW);
         wallItem(SNSBlocks.CANDY_CANE_PLANK_WALL, SNSBlocks.CANDY_CANE_PLANKS);
+        wallItem(SNSBlocks.CANDY_CANE_STONE_WALL, SNSBlocks.CANDY_CANE_STONE);
         wallItem(SNSBlocks.HUMBUG_BLOCK_WALL, SNSBlocks.HUMBUG_BLOCK);
         wallItem(SNSBlocks.HUMBUG_BRICKS_WALL, SNSBlocks.HUMBUG_BRICKS);
         wallItem(SNSBlocks.HARDENED_HUMBUG_BLOCK_WALL, SNSBlocks.HARDENED_HUMBUG_BLOCK);
@@ -83,7 +86,15 @@ public class SNSItemModelProvider extends ItemModelProvider {
         simpleItem(SNSItems.MINT_MARSHMALLOW);
         simpleItem(SNSItems.TOOTHPASTE);
 //FLORA
+        simpleBlockItem(SNSBlocks.CANDY_CANE_BUSH);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_CARNATION);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_CARNATIONS);
         simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER_2);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER_3);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER_4);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_GRASS);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_GRASS_LONG);
         saplingItem(SNSBlocks.CANDY_CANE_SAPLING);
 
     }

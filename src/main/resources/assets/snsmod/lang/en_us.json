@@ -63,7 +63,24 @@
   "block.snsmod.candy_cane_bricks_yellow_stairs": "Yellow Candy Cane Bricks Stairs",
   "block.snsmod.candy_cane_bricks_yellow_wall": "Yellow Candy Cane Bricks Wall",
 
+  "block.snsmod.candy_cane_stone": "Candy Cane Stone",
+  "block.snsmod.candy_cane_stone_button": "Candy Cane Stone Button",
+  "block.snsmod.candy_cane_stone_fence": "Candy Cane Stone Fence",
+  "block.snsmod.candy_cane_stone_fence_gate": "Candy Cane Stone Fence Gate",
+  "block.snsmod.candy_cane_stone_pressure_plate": "Candy Cane Stone Pressure Plate",
+  "block.snsmod.candy_cane_stone_slab": "Candy Cane Stone Slab",
+  "block.snsmod.candy_cane_stone_stairs": "Candy Cane Stone Stairs",
+  "block.snsmod.candy_cane_stone_wall": "Candy Cane Stone Wall",
+
+  "block.snsmod.candy_cane_bush": "Candy Cane Bush",
+  "block.snsmod.candy_cane_carnation": "Candy Cane Carnation",
+  "block.snsmod.candy_cane_carnations": "Candy Cane Carnations",
   "block.snsmod.candy_cane_flower": "Candy Cane Flower",
+  "block.snsmod.candy_cane_flower_2": "Candy Cane Flower",
+  "block.snsmod.candy_cane_flower_3": "Candy Cane Flower",
+  "block.snsmod.candy_cane_flower_4": "Candy Cane Flower",
+  "block.snsmod.candy_cane_grass": "Candy Cane Grass",
+  "block.snsmod.candy_cane_grass_long": "Long Candy Cane Grass",
 
   "block.snsmod.candy_cane_furnace": "Candy Cane Furnace",
 
@@ -77,6 +94,8 @@
 
   "block.snsmod.candy_cane_stalk": "Candy Cane Stalk",
   "block.snsmod.stripped_candy_cane_stalk": "Stripped Candy Cane Stalk",
+
+  "block.snsmod.herb_mayfair_portal": "Herb Mayfair Portal",
 
   "block.snsmod.humbug_block": "Humbug Block",
   "block.snsmod.humbug_block_button": "Humbug Block Button",

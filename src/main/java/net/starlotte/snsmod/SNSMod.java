@@ -24,7 +24,11 @@ import net.starlotte.snsmod.recipe.SNSRecipes;
 import net.starlotte.snsmod.screen.CandyCaneFurnaceScreen;
 import net.starlotte.snsmod.screen.SNSMenuTypes;
 import net.starlotte.snsmod.util.SNSWoodTypes;
+import net.starlotte.snsmod.worldgen.biome.SNSTerraBlenderAPI;
+import net.starlotte.snsmod.worldgen.biome.surface.SNSSurfaceRules;
+import net.starlotte.snsmod.worldgen.tree.SNSTrunkPlacerTypes;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 @Mod(SNSMod.MOD_ID)
 
@@ -34,14 +38,16 @@ public class SNSMod {
 
     public SNSMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        SNSItems.register(modEventBus);
         SNSBlocks.register(modEventBus);
-        SNSTabs.register(modEventBus);
-        SNSMenuTypes.register(modEventBus);
         SNSBlockEntities.register(modEventBus);
-        SNSRecipes.register(modEventBus);
+        SNSItems.register(modEventBus);
+        SNSMenuTypes.register(modEventBus);
         SNSPaintings.register(modEventBus);
         SNSParticles.register(modEventBus);
+        SNSRecipes.register(modEventBus);
+        SNSTabs.register(modEventBus);
+        SNSTerraBlenderAPI.registerRegions();
+        SNSTrunkPlacerTypes.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -50,8 +56,18 @@ public class SNSMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_BUSH.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_CARNATION.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_CARNATIONS.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER_2.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER_3.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER_4.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_GRASS.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_GRASS_LONG.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_SAPLING.getId(), SNSBlocks.POTTED_CANDY_CANE_SAPLING);
+
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, SNSSurfaceRules.makeRules());
 
         });
     }

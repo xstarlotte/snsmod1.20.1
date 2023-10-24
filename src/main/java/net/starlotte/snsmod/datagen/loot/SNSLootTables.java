@@ -82,6 +82,15 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.add(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_SLAB.get(), block -> createSlabItemTable(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_SLAB.get()));
         this.dropSelf(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_STAIRS.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_BRICKS_YELLOW_WALL.get());
+//CANDY CANE STONE
+        this.dropSelf(SNSBlocks.CANDY_CANE_STONE.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_STONE_BUTTON.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_STONE_FENCE.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_STONE_FENCE_GATE.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_STONE_PRESSURE_PLATE.get());
+        this.add(SNSBlocks.CANDY_CANE_STONE_SLAB.get(), block -> createSlabItemTable(SNSBlocks.CANDY_CANE_STONE_SLAB.get()));
+        this.dropSelf(SNSBlocks.CANDY_CANE_STONE_STAIRS.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_STONE_WALL.get());
 //HUMBUG
         this.dropSelf(SNSBlocks.HUMBUG_BLOCK.get());
         this.dropSelf(SNSBlocks.HUMBUG_BLOCK_BUTTON.get());
@@ -166,10 +175,35 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.dropSelf(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS.get());
         this.dropSelf(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get());
 //FLORA
+        this.dropSelf(SNSBlocks.CANDY_CANE_BUSH.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_CARNATION.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_CARNATIONS.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_FLOWER.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_FLOWER_2.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_FLOWER_3.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_FLOWER_4.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_GRASS.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_GRASS_LONG.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_SAPLING.get());
+
+        this.add(SNSBlocks.POTTED_CANDY_CANE_BUSH.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_BUSH.get()));
+        this.add(SNSBlocks.POTTED_CANDY_CANE_CARNATION.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_CARNATION.get()));
+        this.add(SNSBlocks.POTTED_CANDY_CANE_CARNATIONS.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_CARNATIONS.get()));
         this.add(SNSBlocks.POTTED_CANDY_CANE_FLOWER.get(),
                 createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_FLOWER.get()));
-        this.dropSelf(SNSBlocks.CANDY_CANE_SAPLING.get());
+        this.add(SNSBlocks.POTTED_CANDY_CANE_FLOWER_2.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_FLOWER_2.get()));
+        this.add(SNSBlocks.POTTED_CANDY_CANE_FLOWER_3.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_FLOWER_3.get()));
+        this.add(SNSBlocks.POTTED_CANDY_CANE_FLOWER_4.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_FLOWER_4.get()));
+        this.add(SNSBlocks.POTTED_CANDY_CANE_GRASS.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_GRASS.get()));
+        this.add(SNSBlocks.POTTED_CANDY_CANE_GRASS_LONG.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_GRASS_LONG.get()));
         this.add(SNSBlocks.POTTED_CANDY_CANE_SAPLING.get(),
                 createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_SAPLING.get()));
 //BLOCK ENTITIES

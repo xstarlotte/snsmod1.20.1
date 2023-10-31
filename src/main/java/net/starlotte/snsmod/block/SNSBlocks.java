@@ -35,6 +35,7 @@ public class SNSBlocks {
     public static final RegistryObject<Block> CANDY_CANE_BLOCK_SLAB = registerBlock("candy_cane_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CANDY_CANE_BLOCK_STAIRS = registerBlock("candy_cane_block_stairs", () -> new StairBlock(() -> SNSBlocks.CANDY_CANE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CANDY_CANE_BLOCK_WALL = registerBlock("candy_cane_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> CANDY_CANE_DIRT = registerBlock("candy_cane_dirt", () -> new SnowyDirtBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)));
     public static final RegistryObject<Block> CANDY_CANE_GRASS_BLOCK = registerBlock("candy_cane_grass_block", () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
     public static final RegistryObject<Block> CANDY_CANE_LEAVES = registerBlock("candy_cane_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LEAVES)){
         @Override
@@ -113,6 +114,10 @@ public class SNSBlocks {
     public static final RegistryObject<Block> CANDY_CANE_STONE_SLAB = registerBlock("candy_cane_stone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CANDY_CANE_STONE_STAIRS = registerBlock("candy_cane_stone_stairs", () -> new StairBlock(() -> SNSBlocks.CANDY_CANE_STONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CANDY_CANE_STONE_WALL = registerBlock("candy_cane_stone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    //CINNAMON
+    public static final RegistryObject<Block> CINNAMON_BLOCK = registerBlock("cinnamon_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK)));
+    public static final RegistryObject<Block> CINNAMON_DIRT = registerBlock("cinnamon_dirt", () -> new SnowyDirtBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+    public static final RegistryObject<Block> CINNAMON_GRASS_BLOCK = registerBlock("cinnamon_grass_block", () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
     //HUMBUG
     public static final RegistryObject<Block> HUMBUG_BLOCK = registerBlock("humbug_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> HUMBUG_BLOCK_BUTTON = registerBlock("humbug_block_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
@@ -145,6 +150,8 @@ public class SNSBlocks {
     public static final RegistryObject<Block> MINT_BLOCK_BUTTON = registerBlock("mint_block_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
     public static final RegistryObject<Block> MINT_BLOCK_FENCE = registerBlock("mint_block_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> MINT_BLOCK_FENCE_GATE = registerBlock("mint_block_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.STONE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> MINT_DIRT = registerBlock("mint_dirt", () -> new SnowyDirtBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+    public static final RegistryObject<Block> MINT_GRASS_BLOCK = registerBlock("mint_grass_block", () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
     public static final RegistryObject<Block> MINT_BLOCK_PRESSURE_PLATE = registerBlock("mint_block_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE), BlockSetType.STONE));
     public static final RegistryObject<Block> MINT_BLOCK_SLAB = registerBlock("mint_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).sound(SoundType.STONE)));
     public static final RegistryObject<Block> MINT_BLOCK_STAIRS = registerBlock("mint_block_stairs", () -> new StairBlock(() -> SNSBlocks.MINT_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
@@ -197,7 +204,7 @@ public class SNSBlocks {
     public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_STAIRS = registerBlock("hardened_toothpaste_block_stairs", () -> new StairBlock(() -> SNSBlocks.HARDENED_TOOTHPASTE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_WALL = registerBlock("hardened_toothpaste_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 //FLORA
-public static final RegistryObject<Block> CANDY_CANE_BUSH = registerBlock("candy_cane_bush",
+    public static final RegistryObject<Block> CANDY_CANE_BUSH = registerBlock("candy_cane_bush",
         () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> CANDY_CANE_CARNATION = registerBlock("candy_cane_carnation",
             () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
@@ -214,6 +221,17 @@ public static final RegistryObject<Block> CANDY_CANE_BUSH = registerBlock("candy
     public static final RegistryObject<Block> CANDY_CANE_GRASS = registerBlock("candy_cane_grass",
             () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistryObject<Block> CANDY_CANE_GRASS_LONG = registerBlock("candy_cane_grass_long",
+            () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+
+    public static final RegistryObject<Block> MINT_BUSH = registerBlock("mint_bush",
+            () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> MINT_CHOCOLATE_TULIP = registerBlock("mint_chocolate_tulip",
+            () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> MINT_FLOWER = registerBlock("mint_flower",
+            () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> MINT_IMPEONY = registerBlock("mint_impeony",
+            () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> POLO_PLANT = registerBlock("polo_plant",
             () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     //POTTED FLORA
     public static final RegistryObject<Block> POTTED_CANDY_CANE_BUSH = BLOCKS.register("potted_candy_cane_bush",
@@ -234,6 +252,17 @@ public static final RegistryObject<Block> CANDY_CANE_BUSH = registerBlock("candy
             () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), CANDY_CANE_GRASS, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
     public static final RegistryObject<Block> POTTED_CANDY_CANE_GRASS_LONG = BLOCKS.register("potted_candy_cane_grass_long",
             () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), CANDY_CANE_GRASS_LONG, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
+    public static final RegistryObject<Block> POTTED_MINT_BUSH = BLOCKS.register("potted_mint_bush",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), MINT_BUSH, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+    public static final RegistryObject<Block> POTTED_MINT_CHOCOLATE_TULIP = BLOCKS.register("potted_mint_chocolate_tulip",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), MINT_BUSH, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+    public static final RegistryObject<Block> POTTED_MINT_FLOWER = BLOCKS.register("potted_mint_flower",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), MINT_FLOWER, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+    public static final RegistryObject<Block> POTTED_MINT_IMPEONY = BLOCKS.register("potted_mint_impeony",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), MINT_BUSH, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+    public static final RegistryObject<Block> POTTED_POLO_PLANT = BLOCKS.register("potted_polo_plant",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), MINT_BUSH, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
 //SAPLING
     public static final RegistryObject<Block> CANDY_CANE_SAPLING = registerBlock("candy_cane_sapling", () -> new SaplingBlock(new CandyCaneTreeGrower(), (BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING))));
 //POTTED SAPLING

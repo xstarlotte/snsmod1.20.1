@@ -22,7 +22,12 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
 
         this.tag(BlockTags.DIRT)
-                .add(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get()
+                .add(SNSBlocks.CANDY_CANE_DIRT.get(),
+                        SNSBlocks.CANDY_CANE_GRASS_BLOCK.get(),
+                        SNSBlocks.MINT_DIRT.get(),
+                        SNSBlocks.MINT_GRASS_BLOCK.get(),
+                        SNSBlocks.CINNAMON_GRASS_BLOCK.get(),
+                        SNSBlocks.CINNAMON_DIRT.get()
 
                 );
 
@@ -67,16 +72,21 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                 );
 
         this.tag(BlockTags.FLOWERS)
-                .add(SNSBlocks.CANDY_CANE_BUSH.get(),
-                SNSBlocks.CANDY_CANE_CARNATION.get(),
-                SNSBlocks.CANDY_CANE_CARNATIONS.get(),
-                SNSBlocks.CANDY_CANE_FLOWER.get(),
-                SNSBlocks.CANDY_CANE_FLOWER_2.get(),
-                SNSBlocks.CANDY_CANE_FLOWER_3.get(),
-                SNSBlocks.CANDY_CANE_FLOWER_4.get(),
-                SNSBlocks.CANDY_CANE_GRASS.get(),
-                SNSBlocks.CANDY_CANE_GRASS_LONG.get()
+                        .add(SNSBlocks.CANDY_CANE_BUSH.get(),
+                        SNSBlocks.CANDY_CANE_CARNATION.get(),
+                        SNSBlocks.CANDY_CANE_CARNATIONS.get(),
+                        SNSBlocks.CANDY_CANE_FLOWER.get(),
+                        SNSBlocks.CANDY_CANE_FLOWER_2.get(),
+                        SNSBlocks.CANDY_CANE_FLOWER_3.get(),
+                        SNSBlocks.CANDY_CANE_FLOWER_4.get(),
+                        SNSBlocks.CANDY_CANE_GRASS.get(),
+                        SNSBlocks.CANDY_CANE_GRASS_LONG.get(),
 
+                        SNSBlocks.MINT_BUSH.get(),
+                        SNSBlocks.MINT_CHOCOLATE_TULIP.get(),
+                        SNSBlocks.MINT_FLOWER.get(),
+                        SNSBlocks.MINT_IMPEONY.get(),
+                        SNSBlocks.POLO_PLANT.get()
                 );
 
         this.tag(BlockTags.LEAVES)

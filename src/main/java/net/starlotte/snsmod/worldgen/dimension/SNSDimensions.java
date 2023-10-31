@@ -57,18 +57,18 @@ public class SNSDimensions {
         HolderGetter<DimensionType> dimTypes = context.lookup(Registries.DIMENSION_TYPE);
         HolderGetter<NoiseGeneratorSettings> noiseGenSettings = context.lookup(Registries.NOISE_SETTINGS);
 
-      //  NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
+       // NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
        //         new FixedBiomeSource(biomeRegistry.getOrThrow(SNSBiomes.CANDY_CANE_BIOME)),
-       //         noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
+        //        noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));
 
         NoiseBasedChunkGenerator noiseBasedChunkGenerator = new NoiseBasedChunkGenerator(
                 MultiNoiseBiomeSource.createFromList(
-                        new Climate.ParameterList<>(List.of(Pair.of(
-                                        Climate.parameters(0.1F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.CANDY_CANE_BIOME)),
-                                Pair.of(Climate.parameters(0.1F, 0.2F, 0.0F, 0.2F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.MINT_BIOME)),
-                                Pair.of(Climate.parameters(0.1F, 0.6F, 0.1F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.COLD_OCEAN))
+                        new Climate.ParameterList<>(List.of(
+                                Pair.of(Climate.parameters(0.1F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.CANDY_CANE_BIOME)),
+                                Pair.of(Climate.parameters(0.1F, 0.0F, 0.0F, 0.0F, 0.0F, 0.1F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.CINNAMON_BIOME)),
+                               Pair.of(Climate.parameters(0.1F, 0.0F, 0.0F, 0.0F, 0.0F, 0.2F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.MINT_BIOME))
                         ))),
-                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
+                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));
 
         LevelStem stem = new LevelStem(dimTypes.getOrThrow(SNSDimensions.HERB_MAYFAIR_DIM_TYPE), noiseBasedChunkGenerator);
 

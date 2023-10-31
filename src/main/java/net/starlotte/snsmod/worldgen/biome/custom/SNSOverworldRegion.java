@@ -21,9 +21,5 @@ public class SNSOverworldRegion extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint,
                     ResourceKey<Biome>>> mapper) {
-        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
-            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.FOREST, SNSBiomes.CANDY_CANE_BIOME);
-            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.PLAINS, SNSBiomes.MINT_BIOME);
-        });
     }
 }

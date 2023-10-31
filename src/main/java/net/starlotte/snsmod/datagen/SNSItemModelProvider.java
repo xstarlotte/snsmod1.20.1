@@ -84,7 +84,11 @@ public class SNSItemModelProvider extends ItemModelProvider {
         simpleItem(SNSItems.MINT_CHOCOLATE_BALL);
         simpleItem(SNSItems.MINT_IMPERIAL);
         simpleItem(SNSItems.MINT_MARSHMALLOW);
+        simpleItem(SNSItems.POLO);
         simpleItem(SNSItems.TOOTHPASTE);
+
+        simpleItem(SNSItems.CINNAMON_ROLL);
+        simpleItem(SNSItems.CINNAMON_STICKS);
 //FLORA
         simpleBlockItem(SNSBlocks.CANDY_CANE_BUSH);
         simpleBlockItem(SNSBlocks.CANDY_CANE_CARNATION);
@@ -96,6 +100,12 @@ public class SNSItemModelProvider extends ItemModelProvider {
         simpleBlockItem(SNSBlocks.CANDY_CANE_GRASS);
         simpleBlockItem(SNSBlocks.CANDY_CANE_GRASS_LONG);
         saplingItem(SNSBlocks.CANDY_CANE_SAPLING);
+
+        simpleBlockItem(SNSBlocks.MINT_BUSH);
+        simpleBlockItem(SNSBlocks.MINT_CHOCOLATE_TULIP);
+        simpleBlockItem(SNSBlocks.MINT_FLOWER);
+        simpleBlockItem(SNSBlocks.MINT_IMPEONY);
+        simpleBlockItem(SNSBlocks.POLO_PLANT);
 
     }
 

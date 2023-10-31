@@ -6,28 +6,56 @@ import net.starlotte.snsmod.block.SNSBlocks;
 import net.starlotte.snsmod.worldgen.biome.SNSBiomes;
 
 public class SNSSurfaceRules {
-    private static final SurfaceRules.RuleSource MINT_BLOCK = makeStateRule(SNSBlocks.MINT_BLOCK.get());
-    private static final SurfaceRules.RuleSource HARDENED_MINT_BLOCK = makeStateRule(SNSBlocks.HARDENED_MINT_BLOCK.get());
+//candy cane
     private static final SurfaceRules.RuleSource CANDY_CANE_STONE = makeStateRule(SNSBlocks.CANDY_CANE_STONE.get());
     private static final SurfaceRules.RuleSource CANDY_CANE_GRASS_BLOCK = makeStateRule(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get());
+    private static final SurfaceRules.RuleSource CANDY_CANE_DIRT = makeStateRule(SNSBlocks.CANDY_CANE_DIRT.get());
+//cinnamon
+    private static final SurfaceRules.RuleSource CINNAMON_BLOCK = makeStateRule(SNSBlocks.CINNAMON_BLOCK.get());
+    private static final SurfaceRules.RuleSource CINNAMON_GRASS_BLOCK = makeStateRule(SNSBlocks.CINNAMON_GRASS_BLOCK.get());
+    private static final SurfaceRules.RuleSource CINNAMON_DIRT = makeStateRule(SNSBlocks.CINNAMON_DIRT.get());
+//mint
+    private static final SurfaceRules.RuleSource MINT_DIRT = makeStateRule(SNSBlocks.MINT_DIRT.get());
+    private static final SurfaceRules.RuleSource MINT_GRASS_BLOCK = makeStateRule(SNSBlocks.MINT_GRASS_BLOCK.get());
+    private static final SurfaceRules.RuleSource MINT_BLOCK = makeStateRule(SNSBlocks.MINT_BLOCK.get());
 
     public static SurfaceRules.RuleSource makeRules() {
-        SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
-
-        SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, CANDY_CANE_GRASS_BLOCK), MINT_BLOCK);
 
         return SurfaceRules.sequence(
-                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CANDY_CANE_BIOME),
+//candy cane
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CANDY_CANE_BIOME),
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, CANDY_CANE_GRASS_BLOCK)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CANDY_CANE_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, CANDY_CANE_DIRT)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CANDY_CANE_BIOME),
                         SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, CANDY_CANE_STONE)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CANDY_CANE_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.DEEP_UNDER_FLOOR, CANDY_CANE_STONE)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CANDY_CANE_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.VERY_DEEP_UNDER_FLOOR, CANDY_CANE_STONE)),
+//cinnamon
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CINNAMON_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, CINNAMON_GRASS_BLOCK)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CINNAMON_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, CINNAMON_DIRT)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CINNAMON_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, CINNAMON_BLOCK)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CINNAMON_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.DEEP_UNDER_FLOOR, CINNAMON_BLOCK)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.CINNAMON_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.VERY_DEEP_UNDER_FLOOR, CINNAMON_BLOCK)),
+//mint
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.MINT_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MINT_GRASS_BLOCK)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.MINT_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, MINT_DIRT)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.MINT_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, MINT_BLOCK)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.MINT_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.DEEP_UNDER_FLOOR, MINT_BLOCK)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.MINT_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.VERY_DEEP_UNDER_FLOOR, MINT_BLOCK))
 
-                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.MINT_BIOME),
-                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MINT_BLOCK)),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, HARDENED_MINT_BLOCK)),
-
-
-                // Default to a grass and dirt surface
-                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface)
         );
     }
 

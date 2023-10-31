@@ -56,16 +56,22 @@ public class SNSMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_BUSH.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_CARNATION.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_CARNATIONS.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_BUSH.getId(), SNSBlocks.POTTED_CANDY_CANE_BUSH);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_CARNATION.getId(), SNSBlocks.POTTED_CANDY_CANE_CARNATION);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_CARNATIONS.getId(), SNSBlocks.POTTED_CANDY_CANE_CARNATIONS);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER_2.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER_3.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER_4.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_GRASS.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_GRASS_LONG.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER_2.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER_2);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER_3.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER_3);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_FLOWER_4.getId(), SNSBlocks.POTTED_CANDY_CANE_FLOWER_4);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_GRASS.getId(), SNSBlocks.POTTED_CANDY_CANE_GRASS);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_GRASS_LONG.getId(), SNSBlocks.POTTED_CANDY_CANE_GRASS_LONG);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.CANDY_CANE_SAPLING.getId(), SNSBlocks.POTTED_CANDY_CANE_SAPLING);
+
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.MINT_BUSH.getId(), SNSBlocks.POTTED_MINT_BUSH);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.MINT_CHOCOLATE_TULIP.getId(), SNSBlocks.POTTED_MINT_CHOCOLATE_TULIP);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.MINT_FLOWER.getId(), SNSBlocks.POTTED_MINT_FLOWER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.MINT_IMPEONY.getId(), SNSBlocks.POTTED_MINT_IMPEONY);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SNSBlocks.POLO_PLANT.getId(), SNSBlocks.POTTED_POLO_PLANT);
 
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, SNSSurfaceRules.makeRules());
 

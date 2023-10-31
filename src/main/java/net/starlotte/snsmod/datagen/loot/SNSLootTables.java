@@ -25,6 +25,7 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.add(SNSBlocks.CANDY_CANE_BLOCK_SLAB.get(), block -> createSlabItemTable(SNSBlocks.CANDY_CANE_BLOCK_SLAB.get()));
         this.dropSelf(SNSBlocks.CANDY_CANE_BLOCK_STAIRS.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_BLOCK_WALL.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_DIRT.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get());
         this.add(SNSBlocks.CANDY_CANE_LEAVES.get(), block -> createLeavesDrops(block, SNSBlocks.CANDY_CANE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.dropSelf(SNSBlocks.CANDY_CANE_PLANKS.get());
@@ -91,6 +92,10 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.add(SNSBlocks.CANDY_CANE_STONE_SLAB.get(), block -> createSlabItemTable(SNSBlocks.CANDY_CANE_STONE_SLAB.get()));
         this.dropSelf(SNSBlocks.CANDY_CANE_STONE_STAIRS.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_STONE_WALL.get());
+//CINNAMON
+        this.dropSelf(SNSBlocks.CINNAMON_BLOCK.get());
+        this.dropSelf(SNSBlocks.CINNAMON_DIRT.get());
+        this.dropSelf(SNSBlocks.CINNAMON_GRASS_BLOCK.get());
 //HUMBUG
         this.dropSelf(SNSBlocks.HUMBUG_BLOCK.get());
         this.dropSelf(SNSBlocks.HUMBUG_BLOCK_BUTTON.get());
@@ -123,6 +128,8 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.dropSelf(SNSBlocks.MINT_BLOCK_BUTTON.get());
         this.dropSelf(SNSBlocks.MINT_BLOCK_FENCE.get());
         this.dropSelf(SNSBlocks.MINT_BLOCK_FENCE_GATE.get());
+        this.dropSelf(SNSBlocks.MINT_DIRT.get());
+        this.dropSelf(SNSBlocks.MINT_GRASS_BLOCK.get());
         this.dropSelf(SNSBlocks.MINT_BLOCK_PRESSURE_PLATE.get());
         this.add(SNSBlocks.MINT_BLOCK_SLAB.get(), block -> createSlabItemTable(SNSBlocks.MINT_BLOCK_SLAB.get()));
         this.dropSelf(SNSBlocks.MINT_BLOCK_STAIRS.get());
@@ -185,6 +192,11 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.dropSelf(SNSBlocks.CANDY_CANE_GRASS.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_GRASS_LONG.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_SAPLING.get());
+        this.dropSelf(SNSBlocks.MINT_BUSH.get());
+        this.dropSelf(SNSBlocks.MINT_CHOCOLATE_TULIP.get());
+        this.dropSelf(SNSBlocks.MINT_FLOWER.get());
+        this.dropSelf(SNSBlocks.MINT_IMPEONY.get());
+        this.dropSelf(SNSBlocks.POLO_PLANT.get());
 
         this.add(SNSBlocks.POTTED_CANDY_CANE_BUSH.get(),
                 createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_BUSH.get()));
@@ -206,6 +218,16 @@ public class SNSLootTables extends BlockLootSubProvider {
                 createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_GRASS_LONG.get()));
         this.add(SNSBlocks.POTTED_CANDY_CANE_SAPLING.get(),
                 createPotFlowerItemTable(SNSBlocks.POTTED_CANDY_CANE_SAPLING.get()));
+        this.add(SNSBlocks.POTTED_MINT_BUSH.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_MINT_BUSH.get()));
+        this.add(SNSBlocks.POTTED_MINT_CHOCOLATE_TULIP.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_MINT_CHOCOLATE_TULIP.get()));
+        this.add(SNSBlocks.POTTED_MINT_FLOWER.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_MINT_FLOWER.get()));
+        this.add(SNSBlocks.POTTED_MINT_IMPEONY.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_MINT_IMPEONY.get()));
+        this.add(SNSBlocks.POTTED_POLO_PLANT.get(),
+                createPotFlowerItemTable(SNSBlocks.POTTED_POLO_PLANT.get()));
 //BLOCK ENTITIES
 // FURNACES
         this.dropSelf(SNSBlocks.CANDY_CANE_FURNACE.get());

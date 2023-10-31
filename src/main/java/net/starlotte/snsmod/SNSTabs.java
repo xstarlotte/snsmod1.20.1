@@ -24,6 +24,7 @@ public class SNSTabs {
                 output.accept(SNSBlocks.CANDY_CANE_BLOCK_SLAB.get());
                 output.accept(SNSBlocks.CANDY_CANE_BLOCK_STAIRS.get());
                 output.accept(SNSBlocks.CANDY_CANE_BLOCK_WALL.get());
+                output.accept(SNSBlocks.CANDY_CANE_DIRT.get());
                 output.accept(SNSBlocks.CANDY_CANE_GRASS_BLOCK.get());
                 output.accept(SNSBlocks.CANDY_CANE_LEAVES.get());
                 output.accept(SNSBlocks.CANDY_CANE_PLANKS.get());
@@ -90,6 +91,10 @@ public class SNSTabs {
                 output.accept(SNSBlocks.CANDY_CANE_STONE_SLAB.get());
                 output.accept(SNSBlocks.CANDY_CANE_STONE_STAIRS.get());
                 output.accept(SNSBlocks.CANDY_CANE_STONE_WALL.get());
+                //CINNAMON
+                output.accept(SNSBlocks.CINNAMON_BLOCK.get());
+                output.accept(SNSBlocks.CINNAMON_GRASS_BLOCK.get());
+                output.accept(SNSBlocks.CINNAMON_DIRT.get());
                 //HUMBUG
                 output.accept(SNSBlocks.HUMBUG_BLOCK.get());
                 output.accept(SNSBlocks.HUMBUG_BLOCK_BUTTON.get());
@@ -126,6 +131,8 @@ public class SNSTabs {
                 output.accept(SNSBlocks.MINT_BLOCK_SLAB.get());
                 output.accept(SNSBlocks.MINT_BLOCK_STAIRS.get());
                 output.accept(SNSBlocks.MINT_BLOCK_WALL.get());
+                output.accept(SNSBlocks.MINT_DIRT.get());
+                output.accept(SNSBlocks.MINT_GRASS_BLOCK.get());
                 //MINT_BRICKS
                 output.accept(SNSBlocks.MINT_BRICKS.get());
                 output.accept(SNSBlocks.MINT_BRICKS_BUTTON.get());
@@ -189,6 +196,12 @@ public class SNSTabs {
                 output.accept(SNSBlocks.CANDY_CANE_HANGING_SIGN.get());
                 output.accept(SNSBlocks.CANDY_CANE_SAPLING.get());
                 output.accept(SNSBlocks.CANDY_CANE_SIGN.get());
+
+                output.accept(SNSBlocks.MINT_BUSH.get());
+                output.accept(SNSBlocks.MINT_CHOCOLATE_TULIP.get());
+                output.accept(SNSBlocks.MINT_FLOWER.get());
+                output.accept(SNSBlocks.MINT_IMPEONY.get());
+                output.accept(SNSBlocks.POLO_PLANT.get());
             }).build());
 
     public static final RegistryObject<CreativeModeTab> FOOD_TAB = CREATIVE_MODE_TABS.register("food_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANE.get()))
@@ -197,7 +210,11 @@ public class SNSTabs {
                 output.accept(SNSItems.MINT_CHOCOLATE_BALL.get());
                 output.accept(SNSItems.MINT_IMPERIAL.get());
                 output.accept(SNSItems.MINT_MARSHMALLOW.get());
+                output.accept(SNSItems.POLO.get());
                 output.accept(SNSItems.TOOTHPASTE.get());
+
+                output.accept(SNSItems.CINNAMON_ROLL.get());
+                output.accept(SNSItems.CINNAMON_STICKS.get());
             }).build());
 
     public static final RegistryObject<CreativeModeTab> MISC_TAB = CREATIVE_MODE_TABS.register("misc_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANE_SUGAR.get()))

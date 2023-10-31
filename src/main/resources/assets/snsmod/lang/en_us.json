@@ -63,6 +63,8 @@
   "block.snsmod.candy_cane_bricks_yellow_stairs": "Yellow Candy Cane Bricks Stairs",
   "block.snsmod.candy_cane_bricks_yellow_wall": "Yellow Candy Cane Bricks Wall",
 
+  "block.snsmod.candy_cane_dirt": "Candy Cane Dirt",
+
   "block.snsmod.candy_cane_stone": "Candy Cane Stone",
   "block.snsmod.candy_cane_stone_button": "Candy Cane Stone Button",
   "block.snsmod.candy_cane_stone_fence": "Candy Cane Stone Fence",
@@ -94,6 +96,10 @@
 
   "block.snsmod.candy_cane_stalk": "Candy Cane Stalk",
   "block.snsmod.stripped_candy_cane_stalk": "Stripped Candy Cane Stalk",
+
+  "block.snsmod.cinnamon_block": "Cinnamon Block",
+  "block.snsmod.cinnamon_dirt": "Cinnamon Dirt",
+  "block.snsmod.cinnamon_grass_block": "Cinnamon Grass Block",
 
   "block.snsmod.herb_mayfair_portal": "Herb Mayfair Portal",
 
@@ -132,6 +138,8 @@
   "block.snsmod.mint_block_slab": "Mint Block Slab",
   "block.snsmod.mint_block_stairs": "Mint Block Stairs",
   "block.snsmod.mint_block_wall": "Mint Block Wall",
+  "block.snsmod.mint_dirt": "Mint Dirt Block",
+  "block.snsmod.mint_grass_block": "Mint Grass Block",
 
   "block.snsmod.mint_bricks": "Mint Bricks",
   "block.snsmod.mint_bricks_button": "Mint Bricks Button",
@@ -141,6 +149,12 @@
   "block.snsmod.mint_bricks_slab": "Mint Bricks Slab",
   "block.snsmod.mint_bricks_stairs": "Mint Bricks Stairs",
   "block.snsmod.mint_bricks_wall": "Mint Bricks Wall",
+
+  "block.snsmod.mint_bush": "Mint Bush",
+  "block.snsmod.mint_chocolate_tulip": "Mint Chocolate Tulip",
+  "block.snsmod.mint_flower": "Mint Flower",
+  "block.snsmod.mint_impeony": "Mint Impeony",
+  "block.snsmod.polo_plant": "Polo Plant",
 
   "block.snsmod.hardened_mint_block": "Hardened Mint Block",
   "block.snsmod.hardened_mint_block_button": "Hardened Mint Block Button",
@@ -188,7 +202,11 @@
   "item.snsmod.mint_chocolate_ball": "Mint Chocolate Ball",
   "item.snsmod.mint_imperial": "Mint Imperial",
   "item.snsmod.mint_marshmallow": "Mint Marshmallow",
+  "item.snsmod.polo": "Polo",
   "item.snsmod.toothpaste": "Toothpaste",
+
+  "item.snsmod.cinnamon_roll": "Cinnamon Roll",
+  "item.snsmod.cinnamon_sticks": "Cinnamon Sticks",
 
   "painting.snsmod.candy_cane.title": "Candy Cane",
   "painting.snsmod.candy_cane.author": "Starlotte",

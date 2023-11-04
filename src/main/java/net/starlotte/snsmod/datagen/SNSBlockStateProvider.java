@@ -177,6 +177,15 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB.get(), blockTexture(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK.get()), blockTexture(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK.get()));
         stairsBlock((StairBlock) SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS.get(), blockTexture(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK.get()));
         wallBlock((WallBlock) SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get(), blockTexture(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK.get()));
+//TOOTHPASTE STONE
+        blockWithItem(SNSBlocks.TOOTHPASTE_STONE);
+        buttonBlock((ButtonBlock) SNSBlocks.TOOTHPASTE_STONE_BUTTON.get(), blockTexture(SNSBlocks.TOOTHPASTE_STONE.get()));
+        fenceBlock((FenceBlock) SNSBlocks.TOOTHPASTE_STONE_FENCE.get(), blockTexture(SNSBlocks.TOOTHPASTE_STONE.get()));
+        fenceGateBlock((FenceGateBlock) SNSBlocks.TOOTHPASTE_STONE_FENCE_GATE.get(), blockTexture(SNSBlocks.TOOTHPASTE_STONE.get()));
+        pressurePlateBlock((PressurePlateBlock) SNSBlocks.TOOTHPASTE_STONE_PRESSURE_PLATE.get(), blockTexture(SNSBlocks.TOOTHPASTE_STONE.get()));
+        slabBlock((SlabBlock) SNSBlocks.TOOTHPASTE_STONE_SLAB.get(), blockTexture(SNSBlocks.TOOTHPASTE_STONE.get()), blockTexture(SNSBlocks.TOOTHPASTE_STONE.get()));
+        stairsBlock((StairBlock) SNSBlocks.TOOTHPASTE_STONE_STAIRS.get(), blockTexture(SNSBlocks.TOOTHPASTE_STONE.get()));
+        wallBlock((WallBlock) SNSBlocks.TOOTHPASTE_STONE_WALL.get(), blockTexture(SNSBlocks.TOOTHPASTE_STONE.get()));
 // BLOCK ITEMS
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_FENCE_GATE);
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_PRESSURE_PLATE);
@@ -264,6 +273,15 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB);
         blockItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS);
 
+        blockItem(SNSBlocks.TOOTHPASTE_STONE_FENCE_GATE);
+        blockItem(SNSBlocks.TOOTHPASTE_STONE_PRESSURE_PLATE);
+        blockItem(SNSBlocks.TOOTHPASTE_STONE_SLAB);
+        blockItem(SNSBlocks.TOOTHPASTE_STONE_STAIRS);
+
+//DECORATION
+        //CANDY CANE
+        horizontalBlock(SNSBlocks.CANDY_CANE_CAT_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/candy_cane_cat_teddy")));
+        horizontalBlock(SNSBlocks.CANDY_CANE_TABLE.get(), new ModelFile.UncheckedModelFile(modLoc("block/candy_cane_table")));
 //FLORA
         saplingBlock(SNSBlocks.CANDY_CANE_SAPLING);
         simpleBlock(SNSBlocks.CANDY_CANE_BUSH.get(),
@@ -316,6 +334,11 @@ public class SNSBlockStateProvider extends BlockStateProvider {
                 modLoc("block/mint_grass_block_side"),
                 new ResourceLocation("snsmod:block/mint_grass_block_bottom"),
                 modLoc("block/mint_grass_block_top")));
+        simpleBlockWithItem(SNSBlocks.TOOTHPASTE_GRASS_BLOCK.get(), models().orientableWithBottom(SNSBlocks.TOOTHPASTE_GRASS_BLOCK.getId().getPath(),
+                modLoc("block/toothpaste_grass_block_side"),
+                modLoc("block/toothpaste_grass_block_side"),
+                new ResourceLocation("snsmod:block/toothpaste_grass_block_bottom"),
+                modLoc("block/toothpaste_grass_block_top")));
 
 //PORTALS
 

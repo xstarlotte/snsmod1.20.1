@@ -38,6 +38,11 @@ public class SNSItemModelProvider extends ItemModelProvider {
         buttonItem(SNSBlocks.TOOTHPASTE_BLOCK_BUTTON, SNSBlocks.TOOTHPASTE_BLOCK);
         buttonItem(SNSBlocks.TOOTHPASTE_BRICKS_BUTTON, SNSBlocks.TOOTHPASTE_BRICKS);
         buttonItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_BUTTON, SNSBlocks.HARDENED_TOOTHPASTE_BLOCK);
+        buttonItem(SNSBlocks.TOOTHPASTE_STONE_BUTTON, SNSBlocks.TOOTHPASTE_STONE);
+//DECORATION
+    //CANDY CANE
+        complexBlock(SNSBlocks.CANDY_CANE_CAT_TEDDY.get());
+        complexBlock(SNSBlocks.CANDY_CANE_TABLE.get());
 //DOOR ITEMS
         simpleBlockItem(SNSBlocks.HARDENED_MINT_BLOCK_DOOR);
 //FENCE ITEMS
@@ -58,6 +63,37 @@ public class SNSItemModelProvider extends ItemModelProvider {
         fenceItem(SNSBlocks.TOOTHPASTE_BLOCK_FENCE, SNSBlocks.TOOTHPASTE_BLOCK);
         fenceItem(SNSBlocks.TOOTHPASTE_BRICKS_FENCE, SNSBlocks.TOOTHPASTE_BRICKS);
         fenceItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_FENCE, SNSBlocks.HARDENED_TOOTHPASTE_BLOCK);
+        fenceItem(SNSBlocks.TOOTHPASTE_STONE_FENCE, SNSBlocks.TOOTHPASTE_STONE);
+//FLORA
+        simpleBlockItem(SNSBlocks.CANDY_CANE_BUSH);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_CARNATION);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_CARNATIONS);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER_2);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER_3);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER_4);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_GRASS);
+        simpleBlockItem(SNSBlocks.CANDY_CANE_GRASS_LONG);
+        saplingItem(SNSBlocks.CANDY_CANE_SAPLING);
+
+        simpleBlockItem(SNSBlocks.MINT_BUSH);
+        simpleBlockItem(SNSBlocks.MINT_CHOCOLATE_TULIP);
+        simpleBlockItem(SNSBlocks.MINT_FLOWER);
+        simpleBlockItem(SNSBlocks.MINT_IMPEONY);
+        simpleBlockItem(SNSBlocks.POLO_PLANT);
+//SIMPLE ITEMS
+        simpleItem(SNSItems.CANDY_CANE);
+        simpleItem(SNSItems.CANDY_CANE_HANGING_SIGN);
+        simpleItem(SNSItems.CANDY_CANE_SIGN);
+        simpleItem(SNSItems.CANDY_CANE_SUGAR);
+        simpleItem(SNSItems.MINT_CHOCOLATE_BALL);
+        simpleItem(SNSItems.MINT_IMPERIAL);
+        simpleItem(SNSItems.MINT_MARSHMALLOW);
+        simpleItem(SNSItems.POLO);
+        simpleItem(SNSItems.TOOTHPASTE);
+
+        simpleItem(SNSItems.CINNAMON_ROLL);
+        simpleItem(SNSItems.CINNAMON_STICKS);
 //WALL ITEMS
         wallItem(SNSBlocks.CANDY_CANE_BLOCK_WALL, SNSBlocks.CANDY_CANE_BLOCK);
         wallItem(SNSBlocks.CANDY_CANE_BRICKS_WALL, SNSBlocks.CANDY_CANE_BRICKS);
@@ -76,36 +112,9 @@ public class SNSItemModelProvider extends ItemModelProvider {
         wallItem(SNSBlocks.TOOTHPASTE_BLOCK_WALL, SNSBlocks.TOOTHPASTE_BLOCK);
         wallItem(SNSBlocks.TOOTHPASTE_BRICKS_WALL, SNSBlocks.TOOTHPASTE_BRICKS);
         wallItem(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL, SNSBlocks.HARDENED_TOOTHPASTE_BLOCK);
-//SIMPLE ITEMS
-        simpleItem(SNSItems.CANDY_CANE);
-        simpleItem(SNSItems.CANDY_CANE_HANGING_SIGN);
-        simpleItem(SNSItems.CANDY_CANE_SIGN);
-        simpleItem(SNSItems.CANDY_CANE_SUGAR);
-        simpleItem(SNSItems.MINT_CHOCOLATE_BALL);
-        simpleItem(SNSItems.MINT_IMPERIAL);
-        simpleItem(SNSItems.MINT_MARSHMALLOW);
-        simpleItem(SNSItems.POLO);
-        simpleItem(SNSItems.TOOTHPASTE);
+        wallItem(SNSBlocks.TOOTHPASTE_STONE_WALL, SNSBlocks.TOOTHPASTE_STONE);
 
-        simpleItem(SNSItems.CINNAMON_ROLL);
-        simpleItem(SNSItems.CINNAMON_STICKS);
-//FLORA
-        simpleBlockItem(SNSBlocks.CANDY_CANE_BUSH);
-        simpleBlockItem(SNSBlocks.CANDY_CANE_CARNATION);
-        simpleBlockItem(SNSBlocks.CANDY_CANE_CARNATIONS);
-        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER);
-        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER_2);
-        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER_3);
-        simpleBlockItem(SNSBlocks.CANDY_CANE_FLOWER_4);
-        simpleBlockItem(SNSBlocks.CANDY_CANE_GRASS);
-        simpleBlockItem(SNSBlocks.CANDY_CANE_GRASS_LONG);
-        saplingItem(SNSBlocks.CANDY_CANE_SAPLING);
 
-        simpleBlockItem(SNSBlocks.MINT_BUSH);
-        simpleBlockItem(SNSBlocks.MINT_CHOCOLATE_TULIP);
-        simpleBlockItem(SNSBlocks.MINT_FLOWER);
-        simpleBlockItem(SNSBlocks.MINT_IMPEONY);
-        simpleBlockItem(SNSBlocks.POLO_PLANT);
 
     }
 
@@ -117,6 +126,11 @@ public class SNSItemModelProvider extends ItemModelProvider {
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture",  new ResourceLocation(SNSMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder complexBlock(Block block) {
+        return withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), new ResourceLocation(SNSMod.MOD_ID,
+                "block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

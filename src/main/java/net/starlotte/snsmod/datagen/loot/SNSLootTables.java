@@ -163,6 +163,7 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.add(SNSBlocks.TOOTHPASTE_BLOCK_SLAB.get(), block -> createSlabItemTable(SNSBlocks.TOOTHPASTE_BLOCK_SLAB.get()));
         this.dropSelf(SNSBlocks.TOOTHPASTE_BLOCK_STAIRS.get());
         this.dropSelf(SNSBlocks.TOOTHPASTE_BLOCK_WALL.get());
+        this.dropSelf(SNSBlocks.TOOTHPASTE_GRASS_BLOCK.get());
 //TOOTHPASTE_BRICKS
         this.dropSelf(SNSBlocks.TOOTHPASTE_BRICKS.get());
         this.dropSelf(SNSBlocks.TOOTHPASTE_BRICKS_BUTTON.get());
@@ -181,6 +182,20 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.add(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB.get(), block -> createSlabItemTable(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB.get()));
         this.dropSelf(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS.get());
         this.dropSelf(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get());
+ //TOOTHPASTE STONE
+        this.dropSelf(SNSBlocks.TOOTHPASTE_STONE.get());
+        this.dropSelf(SNSBlocks.TOOTHPASTE_STONE_BUTTON.get());
+        this.dropSelf(SNSBlocks.TOOTHPASTE_STONE_FENCE.get());
+        this.dropSelf(SNSBlocks.TOOTHPASTE_STONE_FENCE_GATE.get());
+        this.dropSelf(SNSBlocks.TOOTHPASTE_STONE_PRESSURE_PLATE.get());
+        this.add(SNSBlocks.TOOTHPASTE_STONE_SLAB.get(), block -> createSlabItemTable(SNSBlocks.TOOTHPASTE_STONE_SLAB.get()));
+        this.dropSelf(SNSBlocks.TOOTHPASTE_STONE_STAIRS.get());
+        this.dropSelf(SNSBlocks.TOOTHPASTE_STONE_WALL.get());
+
+//DECORATIONS
+    //CANDY CANE
+        this.dropSelf(SNSBlocks.CANDY_CANE_CAT_TEDDY.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_TABLE.get());
 //FLORA
         this.dropSelf(SNSBlocks.CANDY_CANE_BUSH.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_CARNATION.get());

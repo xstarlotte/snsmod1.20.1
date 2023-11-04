@@ -18,6 +18,10 @@ public class SNSSurfaceRules {
     private static final SurfaceRules.RuleSource MINT_DIRT = makeStateRule(SNSBlocks.MINT_DIRT.get());
     private static final SurfaceRules.RuleSource MINT_GRASS_BLOCK = makeStateRule(SNSBlocks.MINT_GRASS_BLOCK.get());
     private static final SurfaceRules.RuleSource MINT_BLOCK = makeStateRule(SNSBlocks.MINT_BLOCK.get());
+//toothpaste
+    private static final SurfaceRules.RuleSource TOOTHPASTE_BLOCK = makeStateRule(SNSBlocks.TOOTHPASTE_BLOCK.get());
+    private static final SurfaceRules.RuleSource TOOTHPASTE_GRASS_BLOCK = makeStateRule(SNSBlocks.TOOTHPASTE_GRASS_BLOCK.get());
+    private static final SurfaceRules.RuleSource TOOTHPASTE_STONE = makeStateRule(SNSBlocks.TOOTHPASTE_STONE.get());
 
     public static SurfaceRules.RuleSource makeRules() {
 
@@ -54,7 +58,19 @@ public class SNSSurfaceRules {
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.MINT_BIOME),
                         SurfaceRules.ifTrue(SurfaceRules.DEEP_UNDER_FLOOR, MINT_BLOCK)),
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.MINT_BIOME),
-                        SurfaceRules.ifTrue(SurfaceRules.VERY_DEEP_UNDER_FLOOR, MINT_BLOCK))
+                        SurfaceRules.ifTrue(SurfaceRules.VERY_DEEP_UNDER_FLOOR, MINT_BLOCK)),
+
+//toothpaste
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.TOOTHPASTE_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, TOOTHPASTE_GRASS_BLOCK)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.TOOTHPASTE_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, CANDY_CANE_DIRT)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.TOOTHPASTE_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, TOOTHPASTE_STONE)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.TOOTHPASTE_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.DEEP_UNDER_FLOOR, TOOTHPASTE_STONE)),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(SNSBiomes.TOOTHPASTE_BIOME),
+                        SurfaceRules.ifTrue(SurfaceRules.VERY_DEEP_UNDER_FLOOR, TOOTHPASTE_BLOCK))
 
         );
     }

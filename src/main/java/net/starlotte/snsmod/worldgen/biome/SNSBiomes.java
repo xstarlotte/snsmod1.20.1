@@ -18,11 +18,13 @@ public class SNSBiomes {
         public static final ResourceKey<Biome> CANDY_CANE_BIOME = register("candy_cane_biome");
         public static final ResourceKey<Biome> CINNAMON_BIOME = register("cinnamon_biome");
         public static final ResourceKey<Biome> MINT_BIOME = register("mint_biome");
+    public static final ResourceKey<Biome> TOOTHPASTE_BIOME = register("toothpaste_biome");
 
         public static void boostrap(BootstapContext<Biome> context) {
             context.register(CANDY_CANE_BIOME, candyCaneBiome(context));
             context.register(CINNAMON_BIOME, cinnamonBiome(context));
             context.register(MINT_BIOME, mintBiome(context));
+            context.register(TOOTHPASTE_BIOME, toothpasteBiome(context));
         }
 
         public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
@@ -110,6 +112,37 @@ public class SNSBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, SNSPlacedFeatures.MINT_FLOWER_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, SNSPlacedFeatures.MINT_IMPEONY_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, SNSPlacedFeatures.POLO_PLANT_PLACED_KEY);
+        globalOverworldGeneration(biomeBuilder);
+        //SPAWNING
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+        BiomeDefaultFeatures.farmAnimals(spawnBuilder);
+        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 2, 3, 5));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.COW, 5, 4, 4));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(true)
+                .downfall(0.8f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(0x5ca97e)
+                        .skyColor(0x408883)
+                        .waterFogColor(0x5ca97e)
+                        .fogColor(0x408883)
+                        .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                        .build())
+                .build();
+    }
+
+    //toothpaste
+    public static Biome toothpasteBiome(BootstapContext<Biome> context) {
+        //BIOME
+        BiomeGenerationSettings.Builder biomeBuilder =
+                new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
         globalOverworldGeneration(biomeBuilder);
         //SPAWNING
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();

@@ -162,6 +162,7 @@ public class SNSTabs {
                 output.accept(SNSBlocks.TOOTHPASTE_BLOCK_SLAB.get());
                 output.accept(SNSBlocks.TOOTHPASTE_BLOCK_STAIRS.get());
                 output.accept(SNSBlocks.TOOTHPASTE_BLOCK_WALL.get());
+                output.accept(SNSBlocks.TOOTHPASTE_GRASS_BLOCK.get());
                 //TOOTHPASTE_BRICKS
                 output.accept(SNSBlocks.TOOTHPASTE_BRICKS.get());
                 output.accept(SNSBlocks.TOOTHPASTE_BRICKS_BUTTON.get());
@@ -180,10 +181,20 @@ public class SNSTabs {
                 output.accept(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_SLAB.get());
                 output.accept(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_STAIRS.get());
                 output.accept(SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get());
+                //TOOTHPASTE STONE
+                output.accept(SNSBlocks.TOOTHPASTE_STONE.get());
+                output.accept(SNSBlocks.TOOTHPASTE_STONE_BUTTON.get());
+                output.accept(SNSBlocks.TOOTHPASTE_STONE_FENCE.get());
+                output.accept(SNSBlocks.TOOTHPASTE_STONE_FENCE_GATE.get());
+                output.accept(SNSBlocks.TOOTHPASTE_STONE_PRESSURE_PLATE.get());
+                output.accept(SNSBlocks.TOOTHPASTE_STONE_SLAB.get());
+                output.accept(SNSBlocks.TOOTHPASTE_STONE_STAIRS.get());
+                output.accept(SNSBlocks.TOOTHPASTE_STONE_WALL.get());
             }).build());
 
     public static final RegistryObject<CreativeModeTab> DECORATION_TAB = CREATIVE_MODE_TABS.register("decoration_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSBlocks.CANDY_CANE_FLOWER.get()))
             .title(Component.translatable("snstab.decoration_tab")).displayItems((displayParameters, output) -> {
+                output.accept(SNSBlocks.CANDY_CANE_CAT_TEDDY.get());
                 output.accept(SNSBlocks.CANDY_CANE_BUSH.get());
                 output.accept(SNSBlocks.CANDY_CANE_CARNATION.get());
                 output.accept(SNSBlocks.CANDY_CANE_CARNATIONS.get());
@@ -196,6 +207,7 @@ public class SNSTabs {
                 output.accept(SNSBlocks.CANDY_CANE_HANGING_SIGN.get());
                 output.accept(SNSBlocks.CANDY_CANE_SAPLING.get());
                 output.accept(SNSBlocks.CANDY_CANE_SIGN.get());
+                output.accept(SNSBlocks.CANDY_CANE_TABLE.get());
 
                 output.accept(SNSBlocks.MINT_BUSH.get());
                 output.accept(SNSBlocks.MINT_CHOCOLATE_TULIP.get());

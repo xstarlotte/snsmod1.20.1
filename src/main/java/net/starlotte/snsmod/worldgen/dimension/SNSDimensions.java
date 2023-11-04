@@ -65,8 +65,9 @@ public class SNSDimensions {
                 MultiNoiseBiomeSource.createFromList(
                         new Climate.ParameterList<>(List.of(
                                 Pair.of(Climate.parameters(0.1F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.CANDY_CANE_BIOME)),
-                                Pair.of(Climate.parameters(0.1F, 0.0F, 0.0F, 0.0F, 0.0F, 0.1F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.CINNAMON_BIOME)),
-                               Pair.of(Climate.parameters(0.1F, 0.0F, 0.0F, 0.0F, 0.0F, 0.2F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.MINT_BIOME))
+                                Pair.of(Climate.parameters(0.9F, 0.5F, 0.0F, 0.5F, 0.0F, 0.1F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.CINNAMON_BIOME)),
+                               Pair.of(Climate.parameters(0.1F, 0.0F, 0.0F, 0.9F, 0.0F, 0.2F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.MINT_BIOME)),
+                                Pair.of(Climate.parameters(0.1F, 0.0F, 0.0F, 0.9F, 0.0F, 0.3F, 0.0F), biomeRegistry.getOrThrow(SNSBiomes.TOOTHPASTE_BIOME))
                         ))),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.OVERWORLD));
 

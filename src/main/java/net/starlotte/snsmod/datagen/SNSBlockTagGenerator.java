@@ -24,10 +24,11 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.DIRT)
                 .add(SNSBlocks.CANDY_CANE_DIRT.get(),
                         SNSBlocks.CANDY_CANE_GRASS_BLOCK.get(),
+                        SNSBlocks.CINNAMON_GRASS_BLOCK.get(),
+                        SNSBlocks.CINNAMON_DIRT.get(),
                         SNSBlocks.MINT_DIRT.get(),
                         SNSBlocks.MINT_GRASS_BLOCK.get(),
-                        SNSBlocks.CINNAMON_GRASS_BLOCK.get(),
-                        SNSBlocks.CINNAMON_DIRT.get()
+                        SNSBlocks.TOOTHPASTE_GRASS_BLOCK.get()
 
                 );
 
@@ -48,7 +49,8 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.HARDENED_MINT_BLOCK_FENCE.get(),
                         SNSBlocks.TOOTHPASTE_BLOCK_FENCE.get(),
                         SNSBlocks.TOOTHPASTE_BRICKS_FENCE.get(),
-                        SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_FENCE.get()
+                        SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_FENCE.get(),
+                        SNSBlocks.TOOTHPASTE_STONE_FENCE.get()
                 );
 
         this.tag(BlockTags.FENCE_GATES)
@@ -68,7 +70,8 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.HARDENED_MINT_BLOCK_FENCE_GATE.get(),
                         SNSBlocks.TOOTHPASTE_BLOCK_FENCE_GATE.get(),
                         SNSBlocks.TOOTHPASTE_BRICKS_FENCE_GATE.get(),
-                        SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_FENCE_GATE.get()
+                        SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_FENCE_GATE.get(),
+                        SNSBlocks.TOOTHPASTE_STONE_FENCE_GATE.get()
                 );
 
         this.tag(BlockTags.FLOWERS)
@@ -153,7 +156,8 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
                         SNSBlocks.HARDENED_MINT_BLOCK_WALL.get(),
                         SNSBlocks.TOOTHPASTE_BLOCK_WALL.get(),
                         SNSBlocks.TOOTHPASTE_BRICKS_WALL.get(),
-                        SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get()
+                        SNSBlocks.HARDENED_TOOTHPASTE_BLOCK_WALL.get(),
+                        SNSBlocks.TOOTHPASTE_STONE_WALL.get()
                 );
 
     }

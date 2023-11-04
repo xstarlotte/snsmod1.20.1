@@ -84,6 +84,8 @@
   "block.snsmod.candy_cane_grass": "Candy Cane Grass",
   "block.snsmod.candy_cane_grass_long": "Long Candy Cane Grass",
 
+  "block.snsmod.candy_cane_cat_teddy": "Candy Cane Cat Teddy",
+
   "block.snsmod.candy_cane_furnace": "Candy Cane Furnace",
 
   "block.snsmod.candy_cane_grass_block": "Candy Cane Grass Block",
@@ -96,6 +98,8 @@
 
   "block.snsmod.candy_cane_stalk": "Candy Cane Stalk",
   "block.snsmod.stripped_candy_cane_stalk": "Stripped Candy Cane Stalk",
+
+  "block.snsmod.candy_cane_table": "Candy Cane Table",
 
   "block.snsmod.cinnamon_block": "Cinnamon Block",
   "block.snsmod.cinnamon_dirt": "Cinnamon Dirt",
@@ -175,6 +179,7 @@
   "block.snsmod.toothpaste_block_slab": "Toothpaste Block Slab",
   "block.snsmod.toothpaste_block_stairs": "Toothpaste Block Stairs",
   "block.snsmod.toothpaste_block_wall": "Toothpaste Block Wall",
+  "block.snsmod.toothpaste_grass_block": "Toothpaste Grass Block",
 
   "block.snsmod.toothpaste_bricks": "Toothpaste Bricks",
   "block.snsmod.toothpaste_bricks_button": "Toothpaste Brick Button",
@@ -194,7 +199,14 @@
   "block.snsmod.hardened_toothpaste_block_stairs": "Hardened Toothpaste Block Stairs",
   "block.snsmod.hardened_toothpaste_block_wall": "Hardened Toothpaste Block Wall",
 
-
+  "block.snsmod.toothpaste_stone": "Toothpaste Stone",
+  "block.snsmod.toothpaste_stone_button": "Toothpaste Stone Button",
+  "block.snsmod.toothpaste_stone_fence": "Toothpaste Stone Fence",
+  "block.snsmod.toothpaste_stone_fence_gate": "Toothpaste Stone Fence Gate",
+  "block.snsmod.toothpaste_stone_pressure_plate": "Toothpaste Stone Pressure Plate",
+  "block.snsmod.toothpaste_stone_slab": "Toothpaste Stone Slab",
+  "block.snsmod.toothpaste_stone_stairs": "Toothpaste Stone Stairs",
+  "block.snsmod.toothpaste_stone_wall": "Toothpaste Stone Wall",
 
 
   "item.snsmod.candy_cane": "Candy Cane",

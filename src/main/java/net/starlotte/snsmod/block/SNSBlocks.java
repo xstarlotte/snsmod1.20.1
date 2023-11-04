@@ -17,6 +17,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.starlotte.snsmod.SNSMod;
 import net.starlotte.snsmod.block.custom.*;
+import net.starlotte.snsmod.block.custom.decorations.CandyCaneTableBlock;
+import net.starlotte.snsmod.block.custom.decorations.teddies.CandyCaneCatTeddyBlock;
 import net.starlotte.snsmod.item.SNSItems;
 import net.starlotte.snsmod.util.SNSWoodTypes;
 import net.starlotte.snsmod.worldgen.tree.CandyCaneTreeGrower;
@@ -176,6 +178,16 @@ public class SNSBlocks {
     public static final RegistryObject<Block> HARDENED_MINT_BLOCK_STAIRS = registerBlock("hardened_mint_block_stairs", () -> new StairBlock(() -> SNSBlocks.MINT_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> HARDENED_MINT_BLOCK_TRAPDOOR = registerBlock("hardened_mint_block_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion(), BlockSetType.STONE));
     public static final RegistryObject<Block> HARDENED_MINT_BLOCK_WALL = registerBlock("hardened_mint_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+//TOOTHPASTE
+    //HARDENED
+    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK = registerBlock("hardened_toothpaste_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_BUTTON = registerBlock("hardened_toothpaste_block_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
+    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_FENCE = registerBlock("hardened_toothpaste_block_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_FENCE_GATE = registerBlock("hardened_toothpaste_block_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.STONE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_PRESSURE_PLATE = registerBlock("hardened_toothpaste_block_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE), BlockSetType.STONE));
+    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_SLAB = registerBlock("hardened_toothpaste_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_STAIRS = registerBlock("hardened_toothpaste_block_stairs", () -> new StairBlock(() -> SNSBlocks.HARDENED_TOOTHPASTE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_WALL = registerBlock("hardened_toothpaste_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     //TOOTHPASTE
     public static final RegistryObject<Block> TOOTHPASTE_BLOCK = registerBlock("toothpaste_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BLOCK_BUTTON = registerBlock("toothpaste_block_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
@@ -185,6 +197,7 @@ public class SNSBlocks {
     public static final RegistryObject<Block> TOOTHPASTE_BLOCK_SLAB = registerBlock("toothpaste_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).sound(SoundType.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BLOCK_STAIRS = registerBlock("toothpaste_block_stairs", () -> new StairBlock(() -> SNSBlocks.TOOTHPASTE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BLOCK_WALL = registerBlock("toothpaste_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> TOOTHPASTE_GRASS_BLOCK = registerBlock("toothpaste_grass_block", () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
     //TOOTHPASTE_BRICKS
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS = registerBlock("toothpaste_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS_BUTTON = registerBlock("toothpaste_bricks_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
@@ -194,15 +207,15 @@ public class SNSBlocks {
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS_SLAB = registerBlock("toothpaste_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).sound(SoundType.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS_STAIRS = registerBlock("toothpaste_bricks_stairs", () -> new StairBlock(() -> SNSBlocks.TOOTHPASTE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS_WALL = registerBlock("toothpaste_bricks_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
-    //HARDENED_TOOTHPASTE
-    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK = registerBlock("hardened_toothpaste_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
-    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_BUTTON = registerBlock("hardened_toothpaste_block_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
-    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_FENCE = registerBlock("hardened_toothpaste_block_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
-    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_FENCE_GATE = registerBlock("hardened_toothpaste_block_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.STONE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_PRESSURE_PLATE = registerBlock("hardened_toothpaste_block_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE), BlockSetType.STONE));
-    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_SLAB = registerBlock("hardened_toothpaste_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_STAIRS = registerBlock("hardened_toothpaste_block_stairs", () -> new StairBlock(() -> SNSBlocks.HARDENED_TOOTHPASTE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> HARDENED_TOOTHPASTE_BLOCK_WALL = registerBlock("hardened_toothpaste_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    //TOOTHPASTE STONE
+    public static final RegistryObject<Block> TOOTHPASTE_STONE = registerBlock("toothpaste_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> TOOTHPASTE_STONE_BUTTON = registerBlock("toothpaste_stone_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
+    public static final RegistryObject<Block> TOOTHPASTE_STONE_FENCE = registerBlock("toothpaste_stone_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> TOOTHPASTE_STONE_FENCE_GATE = registerBlock("toothpaste_stone_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.STONE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> TOOTHPASTE_STONE_PRESSURE_PLATE = registerBlock("toothpaste_stone_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE), BlockSetType.STONE));
+    public static final RegistryObject<Block> TOOTHPASTE_STONE_SLAB = registerBlock("toothpaste_stone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> TOOTHPASTE_STONE_STAIRS = registerBlock("toothpaste_stone_stairs", () -> new StairBlock(() -> SNSBlocks.TOOTHPASTE_STONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> TOOTHPASTE_STONE_WALL = registerBlock("toothpaste_stone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 //FLORA
     public static final RegistryObject<Block> CANDY_CANE_BUSH = registerBlock("candy_cane_bush",
         () -> new FlowerBlock(() -> MobEffects.HUNGER, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
@@ -280,6 +293,14 @@ public class SNSBlocks {
             () -> new SNSHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_HANGING_SIGN), SNSWoodTypes.CANDY_CANE));
     public static final RegistryObject<Block> CANDY_CANE_WALL_HANGING_SIGN = BLOCKS.register("candy_cane_wall_hanging_sign",
             () -> new SNSWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WALL_HANGING_SIGN), SNSWoodTypes.CANDY_CANE));
+
+//DECORATIONS
+    //CANDY CANE
+public static final RegistryObject<Block> CANDY_CANE_CAT_TEDDY = registerBlock("candy_cane_cat_teddy",
+        () -> new CandyCaneCatTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+public static final RegistryObject<Block> CANDY_CANE_TABLE = registerBlock("candy_cane_table",
+        () -> new CandyCaneTableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
 //PORTALS
 public static final RegistryObject<Block> HERB_MAYFAIR_PORTAL = registerBlock("herb_mayfair_portal",
         () -> new HerbMayfairPortalBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_PORTAL).noLootTable().noOcclusion().noCollission()));

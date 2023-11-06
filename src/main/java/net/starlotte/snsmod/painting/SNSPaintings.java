@@ -13,6 +13,18 @@ public class SNSPaintings {
 
     public static final RegistryObject<PaintingVariant> CANDY_CANE = PAINTING_VARIANTS.register("candy_cane",
             () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> CANDY_CANE_CAT = PAINTING_VARIANTS.register("candy_cane_cat",
+            () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> CANDY_CANE_CAT_LEMON = PAINTING_VARIANTS.register("candy_cane_cat_lemon",
+            () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> CANDY_CANE_CAT_MINT = PAINTING_VARIANTS.register("candy_cane_cat_mint",
+            () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> CANDY_CANE_CAT_PEPPERMINT = PAINTING_VARIANTS.register("candy_cane_cat_peppermint",
+            () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> CANDY_CANE_CAT_SPEARMINT = PAINTING_VARIANTS.register("candy_cane_cat_spearmint",
+            () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> MINT_HUMBUG_CAT = PAINTING_VARIANTS.register("mint_humbug_cat",
+            () -> new PaintingVariant(16, 16));
 
 
     public static void register(IEventBus eventBus) {

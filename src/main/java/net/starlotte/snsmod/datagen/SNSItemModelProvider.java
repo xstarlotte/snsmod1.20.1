@@ -42,9 +42,25 @@ public class SNSItemModelProvider extends ItemModelProvider {
 //DECORATION
     //CANDY CANE
         complexBlock(SNSBlocks.CANDY_CANE_CAT_TEDDY.get());
+        complexBlock(SNSBlocks.LEMON_CANDY_CANE_CAT_TEDDY.get());
+        complexBlock(SNSBlocks.MINT_CANDY_CANE_CAT_TEDDY.get());
+        complexBlock(SNSBlocks.PEPPERMINT_CANDY_CANE_CAT_TEDDY.get());
+        complexBlock(SNSBlocks.SPEARMINT_CANDY_CANE_CAT_TEDDY.get());
+        complexBlock(SNSBlocks.HUMBUG_CAT_TEDDY.get());
+
+        complexBlock(SNSBlocks.CANDY_CANE_WOLF_TEDDY.get());
+        complexBlock(SNSBlocks.LEMON_CANDY_CANE_WOLF_TEDDY.get());
+        complexBlock(SNSBlocks.MINT_CANDY_CANE_WOLF_TEDDY.get());
+        complexBlock(SNSBlocks.PEPPERMINT_CANDY_CANE_WOLF_TEDDY.get());
+        complexBlock(SNSBlocks.SPEARMINT_CANDY_CANE_WOLF_TEDDY.get());
+        complexBlock(SNSBlocks.HUMBUG_WOLF_TEDDY.get());
+
         complexBlock(SNSBlocks.CANDY_CANE_TABLE.get());
 //DOOR ITEMS
+        simpleBlockItem(SNSBlocks.CANDY_CANE_DOOR);
         simpleBlockItem(SNSBlocks.HARDENED_MINT_BLOCK_DOOR);
+        simpleBlockItem(SNSBlocks.TOOTHPASTE_DOOR);
+        simpleBlockItem(SNSBlocks.TOOTHPASTE_BRICKS_DOOR);
 //FENCE ITEMS
         fenceItem(SNSBlocks.CANDY_CANE_BLOCK_FENCE, SNSBlocks.CANDY_CANE_BLOCK);
         fenceItem(SNSBlocks.CANDY_CANE_BRICKS_FENCE, SNSBlocks.CANDY_CANE_BRICKS);

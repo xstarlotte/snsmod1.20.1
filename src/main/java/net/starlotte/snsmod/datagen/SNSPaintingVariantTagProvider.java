@@ -20,6 +20,12 @@ public class SNSPaintingVariantTagProvider extends PaintingVariantTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(PaintingVariantTags.PLACEABLE)
                 .addOptional(new ResourceLocation(SNSMod.MOD_ID, "candy_cane"))
+                .addOptional(new ResourceLocation(SNSMod.MOD_ID, "candy_cane_cat"))
+                .addOptional(new ResourceLocation(SNSMod.MOD_ID, "candy_cane_cat_lemon"))
+                .addOptional(new ResourceLocation(SNSMod.MOD_ID, "candy_cane_cat_mint"))
+                .addOptional(new ResourceLocation(SNSMod.MOD_ID, "candy_cane_cat_peppermint"))
+                .addOptional(new ResourceLocation(SNSMod.MOD_ID, "candy_cane_cat_spearmint"))
+                .addOptional(new ResourceLocation(SNSMod.MOD_ID, "mint_humbug_cat"))
 
         ;
     }

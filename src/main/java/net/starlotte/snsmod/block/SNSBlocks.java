@@ -19,6 +19,7 @@ import net.starlotte.snsmod.SNSMod;
 import net.starlotte.snsmod.block.custom.*;
 import net.starlotte.snsmod.block.custom.decorations.CandyCaneTableBlock;
 import net.starlotte.snsmod.block.custom.decorations.teddies.CandyCaneCatTeddyBlock;
+import net.starlotte.snsmod.block.custom.decorations.teddies.CandyCaneWolfTeddyBlock;
 import net.starlotte.snsmod.item.SNSItems;
 import net.starlotte.snsmod.util.SNSWoodTypes;
 import net.starlotte.snsmod.worldgen.tree.CandyCaneTreeGrower;
@@ -38,6 +39,7 @@ public class SNSBlocks {
     public static final RegistryObject<Block> CANDY_CANE_BLOCK_STAIRS = registerBlock("candy_cane_block_stairs", () -> new StairBlock(() -> SNSBlocks.CANDY_CANE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CANDY_CANE_BLOCK_WALL = registerBlock("candy_cane_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> CANDY_CANE_DIRT = registerBlock("candy_cane_dirt", () -> new SnowyDirtBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+    public static final RegistryObject<Block> CANDY_CANE_DOOR = registerBlock("candy_cane_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion(), BlockSetType.STONE));
     public static final RegistryObject<Block> CANDY_CANE_GRASS_BLOCK = registerBlock("candy_cane_grass_block", () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
     public static final RegistryObject<Block> CANDY_CANE_LEAVES = registerBlock("candy_cane_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LEAVES)){
         @Override
@@ -62,6 +64,7 @@ public class SNSBlocks {
     public static final RegistryObject<Block> CANDY_CANE_PLANK_WALL = registerBlock("candy_cane_plank_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
     public static final RegistryObject<Block> CANDY_CANE_STALK = registerBlock("candy_cane_stalk", () -> new SNSFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LOG)));
     public static final RegistryObject<Block> STRIPPED_CANDY_CANE_STALK = registerBlock("stripped_candy_cane_stalk", () -> new SNSFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CHERRY_LOG)));
+    public static final RegistryObject<Block> CANDY_CANE_TRAPDOOR = registerBlock("candy_cane_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion(), BlockSetType.STONE));
     //CANDY_CANE_BRICK
     public static final RegistryObject<Block> CANDY_CANE_BRICKS = registerBlock("candy_cane_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> CANDY_CANE_BRICKS_BUTTON = registerBlock("candy_cane_bricks_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
@@ -197,10 +200,12 @@ public class SNSBlocks {
     public static final RegistryObject<Block> TOOTHPASTE_BLOCK_SLAB = registerBlock("toothpaste_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).sound(SoundType.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BLOCK_STAIRS = registerBlock("toothpaste_block_stairs", () -> new StairBlock(() -> SNSBlocks.TOOTHPASTE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).sound(SoundType.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BLOCK_WALL = registerBlock("toothpaste_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> TOOTHPASTE_DOOR = registerBlock("toothpaste_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion(), BlockSetType.STONE));
     public static final RegistryObject<Block> TOOTHPASTE_GRASS_BLOCK = registerBlock("toothpaste_grass_block", () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
     //TOOTHPASTE_BRICKS
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS = registerBlock("toothpaste_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS_BUTTON = registerBlock("toothpaste_bricks_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.STONE), BlockSetType.STONE, 10, true));
+    public static final RegistryObject<Block> TOOTHPASTE_BRICKS_DOOR = registerBlock("toothpaste_bricks_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion(), BlockSetType.STONE));
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS_FENCE = registerBlock("toothpaste_bricks_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS_FENCE_GATE = registerBlock("toothpaste_bricks_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.STONE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> TOOTHPASTE_BRICKS_PRESSURE_PLATE = registerBlock("toothpaste_bricks_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE), BlockSetType.STONE));
@@ -296,8 +301,32 @@ public class SNSBlocks {
 
 //DECORATIONS
     //CANDY CANE
-public static final RegistryObject<Block> CANDY_CANE_CAT_TEDDY = registerBlock("candy_cane_cat_teddy",
+    public static final RegistryObject<Block> CANDY_CANE_CAT_TEDDY = registerBlock("candy_cane_cat_teddy",
         () -> new CandyCaneCatTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> LEMON_CANDY_CANE_CAT_TEDDY = registerBlock("lemon_candy_cane_cat_teddy",
+            () -> new CandyCaneCatTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> MINT_CANDY_CANE_CAT_TEDDY = registerBlock("mint_candy_cane_cat_teddy",
+            () -> new CandyCaneCatTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> PEPPERMINT_CANDY_CANE_CAT_TEDDY = registerBlock("peppermint_candy_cane_cat_teddy",
+            () -> new CandyCaneCatTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> SPEARMINT_CANDY_CANE_CAT_TEDDY = registerBlock("spearmint_candy_cane_cat_teddy",
+            () -> new CandyCaneCatTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> HUMBUG_CAT_TEDDY = registerBlock("humbug_cat_teddy",
+            () -> new CandyCaneCatTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+
+    public static final RegistryObject<Block> CANDY_CANE_WOLF_TEDDY = registerBlock("candy_cane_wolf_teddy",
+            () -> new CandyCaneWolfTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> LEMON_CANDY_CANE_WOLF_TEDDY = registerBlock("lemon_candy_cane_wolf_teddy",
+            () -> new CandyCaneWolfTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> MINT_CANDY_CANE_WOLF_TEDDY = registerBlock("mint_candy_cane_wolf_teddy",
+            () -> new CandyCaneWolfTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> PEPPERMINT_CANDY_CANE_WOLF_TEDDY = registerBlock("peppermint_candy_cane_wolf_teddy",
+            () -> new CandyCaneWolfTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> SPEARMINT_CANDY_CANE_WOLF_TEDDY = registerBlock("spearmint_candy_cane_wolf_teddy",
+            () -> new CandyCaneWolfTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+    public static final RegistryObject<Block> HUMBUG_WOLF_TEDDY = registerBlock("humbug_wolf_teddy",
+            () -> new CandyCaneWolfTeddyBlock(BlockBehaviour.Properties.copy(Blocks.PLAYER_HEAD).noOcclusion()));
+
 public static final RegistryObject<Block> CANDY_CANE_TABLE = registerBlock("candy_cane_table",
         () -> new CandyCaneTableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 

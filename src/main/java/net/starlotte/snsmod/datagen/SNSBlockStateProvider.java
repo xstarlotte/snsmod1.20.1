@@ -21,6 +21,7 @@ public class SNSBlockStateProvider extends BlockStateProvider {
 //CANDY_CANE
         blockWithItem(SNSBlocks.CANDY_CANE_BLOCK);
         blockWithItem(SNSBlocks.CANDY_CANE_DIRT);
+        doorBlockWithRenderType((DoorBlock)SNSBlocks.CANDY_CANE_DOOR.get(), modLoc("block/candy_cane_door_bottom"), modLoc("block/candy_cane_door_top"), "translucent");
         buttonBlock((ButtonBlock) SNSBlocks.CANDY_CANE_BLOCK_BUTTON.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
         fenceBlock((FenceBlock) SNSBlocks.CANDY_CANE_BLOCK_FENCE.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
         fenceGateBlock((FenceGateBlock) SNSBlocks.CANDY_CANE_BLOCK_FENCE_GATE.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
@@ -28,6 +29,7 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) SNSBlocks.CANDY_CANE_BLOCK_SLAB.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
         stairsBlock((StairBlock) SNSBlocks.CANDY_CANE_BLOCK_STAIRS.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
         wallBlock((WallBlock) SNSBlocks.CANDY_CANE_BLOCK_WALL.get(), blockTexture(SNSBlocks.CANDY_CANE_BLOCK.get()));
+        trapdoorBlockWithRenderType((TrapDoorBlock) SNSBlocks.CANDY_CANE_TRAPDOOR.get(), modLoc("block/candy_cane_trapdoor"), true, "translucent");
 //CANDY_CANE_BRICK
         blockWithItem(SNSBlocks.CANDY_CANE_BRICKS);
         buttonBlock((ButtonBlock) SNSBlocks.CANDY_CANE_BRICKS_BUTTON.get(), blockTexture(SNSBlocks.CANDY_CANE_BRICKS.get()));
@@ -159,9 +161,11 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) SNSBlocks.TOOTHPASTE_BLOCK_SLAB.get(), blockTexture(SNSBlocks.TOOTHPASTE_BLOCK.get()), blockTexture(SNSBlocks.TOOTHPASTE_BLOCK.get()));
         stairsBlock((StairBlock) SNSBlocks.TOOTHPASTE_BLOCK_STAIRS.get(), blockTexture(SNSBlocks.TOOTHPASTE_BLOCK.get()));
         wallBlock((WallBlock) SNSBlocks.TOOTHPASTE_BLOCK_WALL.get(), blockTexture(SNSBlocks.TOOTHPASTE_BLOCK.get()));
+        doorBlockWithRenderType((DoorBlock)SNSBlocks.TOOTHPASTE_DOOR.get(), modLoc("block/toothpaste_door_bottom"), modLoc("block/toothpaste_door_top"), "translucent");
 //TOOTHPASTE_BRICKS
         blockWithItem(SNSBlocks.TOOTHPASTE_BRICKS);
         buttonBlock((ButtonBlock) SNSBlocks.TOOTHPASTE_BRICKS_BUTTON.get(), blockTexture(SNSBlocks.TOOTHPASTE_BRICKS.get()));
+        doorBlockWithRenderType((DoorBlock)SNSBlocks.TOOTHPASTE_BRICKS_DOOR.get(), modLoc("block/toothpaste_bricks_door_bottom"), modLoc("block/toothpaste_bricks_door_top"), "translucent");
         fenceBlock((FenceBlock) SNSBlocks.TOOTHPASTE_BRICKS_FENCE.get(), blockTexture(SNSBlocks.TOOTHPASTE_BRICKS.get()));
         fenceGateBlock((FenceGateBlock) SNSBlocks.TOOTHPASTE_BRICKS_FENCE_GATE.get(), blockTexture(SNSBlocks.TOOTHPASTE_BRICKS.get()));
         pressurePlateBlock((PressurePlateBlock) SNSBlocks.TOOTHPASTE_BRICKS_PRESSURE_PLATE.get(), blockTexture(SNSBlocks.TOOTHPASTE_BRICKS.get()));
@@ -191,6 +195,7 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_PRESSURE_PLATE);
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_SLAB);
         blockItem(SNSBlocks.CANDY_CANE_BLOCK_STAIRS);
+        blockItem(SNSBlocks.CANDY_CANE_TRAPDOOR, "_bottom");
 
         blockItem(SNSBlocks.CANDY_CANE_BRICKS_FENCE_GATE);
         blockItem(SNSBlocks.CANDY_CANE_BRICKS_PRESSURE_PLATE);
@@ -281,6 +286,19 @@ public class SNSBlockStateProvider extends BlockStateProvider {
 //DECORATION
         //CANDY CANE
         horizontalBlock(SNSBlocks.CANDY_CANE_CAT_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/candy_cane_cat_teddy")));
+        horizontalBlock(SNSBlocks.LEMON_CANDY_CANE_CAT_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/lemon_candy_cane_cat_teddy")));
+        horizontalBlock(SNSBlocks.MINT_CANDY_CANE_CAT_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/mint_candy_cane_cat_teddy")));
+        horizontalBlock(SNSBlocks.PEPPERMINT_CANDY_CANE_CAT_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/peppermint_candy_cane_cat_teddy")));
+        horizontalBlock(SNSBlocks.SPEARMINT_CANDY_CANE_CAT_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/spearmint_candy_cane_cat_teddy")));
+        horizontalBlock(SNSBlocks.HUMBUG_CAT_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/humbug_cat_teddy")));
+
+        horizontalBlock(SNSBlocks.CANDY_CANE_WOLF_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/candy_cane_wolf_teddy")));
+        horizontalBlock(SNSBlocks.LEMON_CANDY_CANE_WOLF_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/lemon_candy_cane_wolf_teddy")));
+        horizontalBlock(SNSBlocks.MINT_CANDY_CANE_WOLF_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/mint_candy_cane_wolf_teddy")));
+        horizontalBlock(SNSBlocks.PEPPERMINT_CANDY_CANE_WOLF_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/peppermint_candy_cane_wolf_teddy")));
+        horizontalBlock(SNSBlocks.SPEARMINT_CANDY_CANE_WOLF_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/spearmint_candy_cane_wolf_teddy")));
+        horizontalBlock(SNSBlocks.HUMBUG_WOLF_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/humbug_wolf_teddy")));
+
         horizontalBlock(SNSBlocks.CANDY_CANE_TABLE.get(), new ModelFile.UncheckedModelFile(modLoc("block/candy_cane_table")));
 //FLORA
         saplingBlock(SNSBlocks.CANDY_CANE_SAPLING);

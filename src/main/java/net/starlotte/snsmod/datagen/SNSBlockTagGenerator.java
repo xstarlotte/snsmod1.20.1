@@ -32,6 +32,13 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
 
                 );
 
+        this.tag(BlockTags.DOORS)
+                .add(SNSBlocks.CANDY_CANE_DOOR.get(),
+                        SNSBlocks.HARDENED_MINT_BLOCK_DOOR.get(),
+                        SNSBlocks.TOOTHPASTE_DOOR.get(),
+                        SNSBlocks.TOOTHPASTE_BRICKS_DOOR.get()
+                );
+
         this.tag(BlockTags.FENCES)
                 .add(SNSBlocks.CANDY_CANE_BLOCK_FENCE.get(),
                         SNSBlocks.CANDY_CANE_BRICKS_FENCE.get(),
@@ -137,6 +144,11 @@ public class SNSBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.PLANKS)
                 .add(SNSBlocks.CANDY_CANE_PLANKS.get()
+                );
+
+        this.tag(BlockTags.TRAPDOORS)
+                .add(SNSBlocks.CANDY_CANE_TRAPDOOR.get(),
+                        SNSBlocks.HARDENED_MINT_BLOCK_TRAPDOOR.get()
                 );
 
         this.tag(BlockTags.WALLS)

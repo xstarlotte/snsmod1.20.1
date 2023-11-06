@@ -2,6 +2,7 @@
 
   "block.snsmod.candy_cane_block": "Candy Cane Block",
   "block.snsmod.candy_cane_block_button": "Candy Cane Button",
+  "block.snsmod.candy_cane_door": "Candy Cane Door",
   "block.snsmod.candy_cane_block_fence": "Candy Cane Fence",
   "block.snsmod.candy_cane_block_fence_gate": "Candy Cane Fence Gate",
   "block.snsmod.candy_cane_block_pressure_plate": "Candy Cane Pressure Plate",
@@ -17,6 +18,7 @@
   "block.snsmod.candy_cane_plank_slab": "Candy Cane Plank Slab",
   "block.snsmod.candy_cane_plank_stairs": "Candy Cane Plank Stairs",
   "block.snsmod.candy_cane_plank_wall": "Candy Cane Plank Wall",
+  "block.snsmod.candy_cane_trapdoor": "Candy Cane Trapdoor",
 
   "block.snsmod.candy_cane_bricks": "Candy Cane Bricks",
   "block.snsmod.candy_cane_bricks_button": "Candy Cane Bricks Button",
@@ -85,6 +87,17 @@
   "block.snsmod.candy_cane_grass_long": "Long Candy Cane Grass",
 
   "block.snsmod.candy_cane_cat_teddy": "Candy Cane Cat Teddy",
+  "block.snsmod.lemon_candy_cane_cat_teddy": "Lemon Candy Cane Cat Teddy",
+  "block.snsmod.mint_candy_cane_cat_teddy": "Mint Candy Cane Cat Teddy",
+  "block.snsmod.peppermint_candy_cane_cat_teddy": "Peppermint Candy Cane Cat Teddy",
+  "block.snsmod.spearmint_candy_cane_cat_teddy": "Spearmint Candy Cane Cat Teddy",
+  "block.snsmod.humbug_cat_teddy": "Humbug Cat Teddy",
+  "block.snsmod.candy_cane_wolf_teddy": "Candy Cane Wolf Teddy",
+  "block.snsmod.lemon_candy_cane_wolf_teddy": "Lemon Candy Cane Wolf Teddy",
+  "block.snsmod.mint_candy_cane_wolf_teddy": "Mint Candy Cane Wolf Teddy",
+  "block.snsmod.peppermint_candy_cane_wolf_teddy": "Peppermint Candy Cane Wolf Teddy",
+  "block.snsmod.spearmint_candy_cane_wolf_teddy": "Spearmint Candy Cane Wolf Teddy",
+  "block.snsmod.humbug_wolf_teddy": "Humbug Wolf Teddy",
 
   "block.snsmod.candy_cane_furnace": "Candy Cane Furnace",
 
@@ -173,6 +186,7 @@
 
   "block.snsmod.toothpaste_block": "Toothpaste Block",
   "block.snsmod.toothpaste_block_button": "Toothpaste Block Button",
+  "block.snsmod.toothpaste_door": "Toothpaste Door",
   "block.snsmod.toothpaste_block_fence": "Toothpaste Block Fence",
   "block.snsmod.toothpaste_block_fence_gate": "Toothpaste Block Fence Gate",
   "block.snsmod.toothpaste_block_pressure_plate": "Toothpaste Block Pressure Plate",
@@ -183,6 +197,7 @@
 
   "block.snsmod.toothpaste_bricks": "Toothpaste Bricks",
   "block.snsmod.toothpaste_bricks_button": "Toothpaste Brick Button",
+  "block.snsmod.toothpaste_bricks_door": "Toothpaste Brick Door",
   "block.snsmod.toothpaste_bricks_fence": "Toothpaste Brick Fence",
   "block.snsmod.toothpaste_bricks_fence_gate": "Toothpaste Brick Fence Gate",
   "block.snsmod.toothpaste_bricks_pressure_plate": "Toothpaste Brick Pressure Plate",
@@ -222,6 +237,18 @@
 
   "painting.snsmod.candy_cane.title": "Candy Cane",
   "painting.snsmod.candy_cane.author": "Starlotte",
+  "painting.snsmod.candy_cane_cat.title": "Candy Cane Cat",
+  "painting.snsmod.candy_cane_cat.author": "Starlotte",
+  "painting.snsmod.candy_cane_cat_lemon.title": "Lemon Candy Cane Cat",
+  "painting.snsmod.candy_cane_cat_lemon.author": "Starlotte",
+  "painting.snsmod.candy_cane_cat_mint.title": "Mint Candy Cane Cat",
+  "painting.snsmod.candy_cane_cat_mint.author": "Starlotte",
+  "painting.snsmod.candy_cane_cat_peppermint.title": "Peppermint Candy Cane Cat",
+  "painting.snsmod.candy_cane_cat_peppermint.author": "Starlotte",
+  "painting.snsmod.candy_cane_cat_spearmint.title": "Spearmint Candy Cane Cat",
+  "painting.snsmod.candy_cane_cat_spearmint.author": "Starlotte",
+  "painting.snsmod.mint_humbug_cat.title": "Mint Humbug Cat",
+  "painting.snsmod.mint_humbug_cat.author": "Starlotte",
 
   "snstab.block_tab": "Blocks - Sweet Not Savoury",
   "snstab.decoration_tab": "Decorations - Sweet Not Savoury",

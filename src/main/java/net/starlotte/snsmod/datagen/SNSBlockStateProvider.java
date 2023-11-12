@@ -300,6 +300,10 @@ public class SNSBlockStateProvider extends BlockStateProvider {
         horizontalBlock(SNSBlocks.HUMBUG_WOLF_TEDDY.get(), new ModelFile.UncheckedModelFile(modLoc("block/humbug_wolf_teddy")));
 
         horizontalBlock(SNSBlocks.CANDY_CANE_TABLE.get(), new ModelFile.UncheckedModelFile(modLoc("block/candy_cane_table")));
+
+        horizontalBlock(SNSBlocks.CANDY_CANE_BONE.get(), new ModelFile.UncheckedModelFile(modLoc("block/candy_cane_bone")));
+        horizontalBlock(SNSBlocks.CANDY_CANE_FOOD_BOWL.get(), new ModelFile.UncheckedModelFile(modLoc("block/candy_cane_food_bowl")));
+        horizontalBlock(SNSBlocks.CANDY_CANE_WATER_BOWL.get(), new ModelFile.UncheckedModelFile(modLoc("block/candy_cane_water_bowl")));
 //FLORA
         saplingBlock(SNSBlocks.CANDY_CANE_SAPLING);
         simpleBlock(SNSBlocks.CANDY_CANE_BUSH.get(),

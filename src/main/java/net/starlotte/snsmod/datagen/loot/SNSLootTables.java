@@ -39,6 +39,7 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.dropSelf(SNSBlocks.CANDY_CANE_PLANK_WALL.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_STALK.get());
         this.dropSelf(SNSBlocks.STRIPPED_CANDY_CANE_STALK.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_TORCH.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_TRAPDOOR.get());
 //CANDY_CANE_BRICKS
         this.dropSelf(SNSBlocks.CANDY_CANE_BRICKS.get());
@@ -213,6 +214,10 @@ public class SNSLootTables extends BlockLootSubProvider {
         this.dropSelf(SNSBlocks.HUMBUG_WOLF_TEDDY.get());
 
         this.dropSelf(SNSBlocks.CANDY_CANE_TABLE.get());
+
+        this.dropSelf(SNSBlocks.CANDY_CANE_BONE.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_FOOD_BOWL.get());
+        this.dropSelf(SNSBlocks.CANDY_CANE_WATER_BOWL.get());
 //FLORA
         this.dropSelf(SNSBlocks.CANDY_CANE_BUSH.get());
         this.dropSelf(SNSBlocks.CANDY_CANE_CARNATION.get());

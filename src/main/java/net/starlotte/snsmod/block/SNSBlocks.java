@@ -18,6 +18,8 @@ import net.minecraftforge.registries.RegistryObject;
 import net.starlotte.snsmod.SNSMod;
 import net.starlotte.snsmod.block.custom.*;
 import net.starlotte.snsmod.block.custom.decorations.CandyCaneTableBlock;
+import net.starlotte.snsmod.block.custom.decorations.pets.CandyCaneBoneBlock;
+import net.starlotte.snsmod.block.custom.decorations.pets.CandyCaneBowlBlock;
 import net.starlotte.snsmod.block.custom.decorations.teddies.CandyCaneCatTeddyBlock;
 import net.starlotte.snsmod.block.custom.decorations.teddies.CandyCaneWolfTeddyBlock;
 import net.starlotte.snsmod.item.SNSItems;
@@ -64,6 +66,8 @@ public class SNSBlocks {
     public static final RegistryObject<Block> CANDY_CANE_PLANK_WALL = registerBlock("candy_cane_plank_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)));
     public static final RegistryObject<Block> CANDY_CANE_STALK = registerBlock("candy_cane_stalk", () -> new SNSFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LOG)));
     public static final RegistryObject<Block> STRIPPED_CANDY_CANE_STALK = registerBlock("stripped_candy_cane_stalk", () -> new SNSFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CHERRY_LOG)));
+    public static final RegistryObject<Block> CANDY_CANE_TORCH = registerBlock("candy_cane_torch", () -> new SNSTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+    public static final RegistryObject<Block> CANDY_CANE_WALL_TORCH = registerBlock("candy_cane_wall_torch", () -> new SNSWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(SNSBlocks.CANDY_CANE_TORCH)));
     public static final RegistryObject<Block> CANDY_CANE_TRAPDOOR = registerBlock("candy_cane_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion(), BlockSetType.STONE));
     //CANDY_CANE_BRICK
     public static final RegistryObject<Block> CANDY_CANE_BRICKS = registerBlock("candy_cane_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
@@ -329,6 +333,13 @@ public class SNSBlocks {
 
 public static final RegistryObject<Block> CANDY_CANE_TABLE = registerBlock("candy_cane_table",
         () -> new CandyCaneTableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> CANDY_CANE_BONE = registerBlock("candy_cane_bone",
+            () -> new CandyCaneBoneBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> CANDY_CANE_FOOD_BOWL = registerBlock("candy_cane_food_bowl",
+            () -> new CandyCaneBowlBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> CANDY_CANE_WATER_BOWL = registerBlock("candy_cane_water_bowl",
+            () -> new CandyCaneBowlBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 //PORTALS
 public static final RegistryObject<Block> HERB_MAYFAIR_PORTAL = registerBlock("herb_mayfair_portal",

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "snsmod:block/candy_cane_wall_torch"
+    },
+    "facing=north": {
+      "model": "snsmod:block/candy_cane_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "snsmod:block/candy_cane_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "snsmod:block/candy_cane_wall_torch",
+      "y": 180
+    }
+  }
+}

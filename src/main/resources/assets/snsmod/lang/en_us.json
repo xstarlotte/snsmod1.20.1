@@ -19,6 +19,7 @@
   "block.snsmod.candy_cane_plank_stairs": "Candy Cane Plank Stairs",
   "block.snsmod.candy_cane_plank_wall": "Candy Cane Plank Wall",
   "block.snsmod.candy_cane_trapdoor": "Candy Cane Trapdoor",
+  "block.snsmod.candy_cane_torch": "Candy Cane Torch",
 
   "block.snsmod.candy_cane_bricks": "Candy Cane Bricks",
   "block.snsmod.candy_cane_bricks_button": "Candy Cane Bricks Button",
@@ -113,6 +114,10 @@
   "block.snsmod.stripped_candy_cane_stalk": "Stripped Candy Cane Stalk",
 
   "block.snsmod.candy_cane_table": "Candy Cane Table",
+
+  "block.snsmod.candy_cane_bone": "Candy Cane Bone",
+  "block.snsmod.candy_cane_food_bowl": "Candy Cane Food Bowl",
+  "block.snsmod.candy_cane_water_bowl": "Candy Cane Water Bowl",
 
   "block.snsmod.cinnamon_block": "Cinnamon Block",
   "block.snsmod.cinnamon_dirt": "Cinnamon Dirt",
@@ -253,6 +258,7 @@
   "snstab.block_tab": "Blocks - Sweet Not Savoury",
   "snstab.decoration_tab": "Decorations - Sweet Not Savoury",
   "snstab.food_tab": "Food - Sweet Not Savoury",
+  "snstab.machines_tab": "Machines - Sweet Not Savoury",
   "snstab.misc_tab": "Misc - Sweet Not Savoury"
 
 }

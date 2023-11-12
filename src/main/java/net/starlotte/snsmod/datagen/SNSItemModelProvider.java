@@ -56,6 +56,10 @@ public class SNSItemModelProvider extends ItemModelProvider {
         complexBlock(SNSBlocks.HUMBUG_WOLF_TEDDY.get());
 
         complexBlock(SNSBlocks.CANDY_CANE_TABLE.get());
+
+        complexBlock(SNSBlocks.CANDY_CANE_BONE.get());
+        complexBlock(SNSBlocks.CANDY_CANE_FOOD_BOWL.get());
+        complexBlock(SNSBlocks.CANDY_CANE_WATER_BOWL.get());
 //DOOR ITEMS
         simpleBlockItem(SNSBlocks.CANDY_CANE_DOOR);
         simpleBlockItem(SNSBlocks.HARDENED_MINT_BLOCK_DOOR);
@@ -102,6 +106,7 @@ public class SNSItemModelProvider extends ItemModelProvider {
         simpleItem(SNSItems.CANDY_CANE_HANGING_SIGN);
         simpleItem(SNSItems.CANDY_CANE_SIGN);
         simpleItem(SNSItems.CANDY_CANE_SUGAR);
+
         simpleItem(SNSItems.MINT_CHOCOLATE_BALL);
         simpleItem(SNSItems.MINT_IMPERIAL);
         simpleItem(SNSItems.MINT_MARSHMALLOW);
@@ -110,6 +115,10 @@ public class SNSItemModelProvider extends ItemModelProvider {
 
         simpleItem(SNSItems.CINNAMON_ROLL);
         simpleItem(SNSItems.CINNAMON_STICKS);
+
+//TORCH
+        simpleTorch(SNSBlocks.CANDY_CANE_TORCH);
+
 //WALL ITEMS
         wallItem(SNSBlocks.CANDY_CANE_BLOCK_WALL, SNSBlocks.CANDY_CANE_BLOCK);
         wallItem(SNSBlocks.CANDY_CANE_BRICKS_WALL, SNSBlocks.CANDY_CANE_BRICKS);
@@ -165,6 +174,12 @@ public class SNSItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(SNSMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleTorch(RegistryObject<Block> block) {
+        return withExistingParent(block.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(SNSMod.MOD_ID,"block/" + block.getId().getPath()));
     }
 
     public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {

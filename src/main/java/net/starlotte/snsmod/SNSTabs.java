@@ -39,6 +39,10 @@ public class SNSTabs {
                 output.accept(SNSBlocks.CANDY_CANE_STALK.get());
                 output.accept(SNSBlocks.STRIPPED_CANDY_CANE_STALK.get());
                 output.accept(SNSBlocks.CANDY_CANE_TRAPDOOR.get());
+
+
+                output.accept(SNSItems.CANDY_CANEFLY_SPAWN_EGG.get());
+
                 //CANDY_CANE_BRICKS
                 output.accept(SNSBlocks.CANDY_CANE_BRICKS.get());
                 output.accept(SNSBlocks.CANDY_CANE_BRICKS_BUTTON.get());

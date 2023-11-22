@@ -3,12 +3,14 @@ package net.starlotte.snsmod.item;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.starlotte.snsmod.SNSMod;
 import net.starlotte.snsmod.block.SNSBlocks;
+import net.starlotte.snsmod.entity.SNSEntities;
 import net.starlotte.snsmod.item.custom.SNSFuelItem;
 
 public class SNSItems {
@@ -34,7 +36,10 @@ public class SNSItems {
             () -> new HangingSignItem(SNSBlocks.CANDY_CANE_HANGING_SIGN.get(), SNSBlocks.CANDY_CANE_WALL_HANGING_SIGN.get(),
                     new Item.Properties().stacksTo(16)));
 
-
+//SPAWN_EGGS
+    public static final RegistryObject<Item> CANDY_CANEFLY_SPAWN_EGG = ITEMS.register("candy_canefly_spawn_egg",
+        () -> new ForgeSpawnEggItem(SNSEntities.CANDY_CANEFLY, 0x7e9680, 0xc5d1c5,
+                new Item.Properties()));
 
 
 

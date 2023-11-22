@@ -3,6 +3,7 @@ package net.starlotte.snsmod;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -17,6 +18,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.starlotte.snsmod.block.SNSBlocks;
 import net.starlotte.snsmod.block.entity.SNSBlockEntities;
+import net.starlotte.snsmod.entity.SNSEntities;
+import net.starlotte.snsmod.entity.client.renderer.entity.category.herb.ambient.CandyCaneflyRenderer;
 import net.starlotte.snsmod.item.SNSItems;
 import net.starlotte.snsmod.painting.SNSPaintings;
 import net.starlotte.snsmod.particle.SNSParticles;
@@ -40,6 +43,7 @@ public class SNSMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         SNSBlocks.register(modEventBus);
         SNSBlockEntities.register(modEventBus);
+        SNSEntities.register(modEventBus);
         SNSItems.register(modEventBus);
         SNSMenuTypes.register(modEventBus);
         SNSPaintings.register(modEventBus);
@@ -94,6 +98,7 @@ public class SNSMod {
 
                 MenuScreens.register(SNSMenuTypes.CANDY_CANE_FURNACE_MENU.get(), CandyCaneFurnaceScreen::new);
                 Sheets.addWoodType(SNSWoodTypes.CANDY_CANE);
+                EntityRenderers.register(SNSEntities.CANDY_CANEFLY.get(), CandyCaneflyRenderer::new);
             });
         }
     }

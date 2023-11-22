@@ -5,10 +5,13 @@ import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.starlotte.snsmod.SNSMod;
 import net.starlotte.snsmod.block.entity.SNSBlockEntities;
+import net.starlotte.snsmod.entity.SNSEntities;
+import net.starlotte.snsmod.entity.category.herb.ambient.CandyCaneflyEntity;
 import net.starlotte.snsmod.particle.CandyCaneFlameParticles;
 import net.starlotte.snsmod.particle.SNSParticles;
 
@@ -25,5 +28,7 @@ public class SNSEventClientBusEvents {
         event.registerBlockEntityRenderer(SNSBlockEntities.SNS_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(SNSBlockEntities.SNS_HANGING_SIGN.get(), HangingSignRenderer::new);
     }
+
+
 
 }

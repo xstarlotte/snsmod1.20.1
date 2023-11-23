@@ -16,8 +16,6 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 
 public class CandyCaneflyRenderer extends GeoEntityRenderer<CandyCaneflyEntity> {
-
-
     public CandyCaneflyRenderer(EntityRendererProvider.Context context) {
         super(context, new CandyCaneflyModel());
     }

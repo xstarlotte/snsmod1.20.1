@@ -1,24 +1,36 @@
 package net.starlotte.snsmod.entity.client.renderer.entity.category.herb.ambient;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.renderer.MultiBufferSource;
+
+import com.google.common.collect.Maps;
+import net.minecraft.Util;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.util.RandomSource;
+import net.minecraft.resources.ResourceLocation;
+import net.starlotte.snsmod.SNSMod;
 import net.starlotte.snsmod.entity.category.herb.ambient.CandyCaneflyEntity;
 import net.starlotte.snsmod.entity.client.model.entity.category.herb.ambient.CandyCaneflyModel;
-import org.joml.Vector3d;
-import software.bernie.example.client.model.entity.BatModel;
-import software.bernie.example.entity.BatEntity;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
+import net.starlotte.snsmod.entity.client.renderer.entity.category.herb.variant.CandyCaneflyVariant;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
+
+import java.util.Map;
+
 
 public class CandyCaneflyRenderer extends GeoEntityRenderer<CandyCaneflyEntity> {
+
+    private static final Map<CandyCaneflyVariant, ResourceLocation> LOCATION_BY_VARIANT =
+            Util.make(Maps.newEnumMap(CandyCaneflyVariant.class), map -> {
+                map.put(CandyCaneflyVariant.DEFAULT, new ResourceLocation(SNSMod.MOD_ID, "textures/entity/category/herb/ambient/candy_canefly.png"));
+                map.put(CandyCaneflyVariant.LEMON, new ResourceLocation(SNSMod.MOD_ID, "textures/entity/category/herb/ambient/lemon_candy_canefly.png"));
+                map.put(CandyCaneflyVariant.MINT, new ResourceLocation(SNSMod.MOD_ID, "textures/entity/category/herb/ambient/mint_candy_canefly.png"));
+                map.put(CandyCaneflyVariant.PEPPERMINT, new ResourceLocation(SNSMod.MOD_ID, "textures/entity/category/herb/ambient/peppermint_candy_canefly.png"));
+                map.put(CandyCaneflyVariant.SPEARMINT, new ResourceLocation(SNSMod.MOD_ID, "textures/entity/category/herb/ambient/spearmint_candy_canefly.png"));
+            });
+
     public CandyCaneflyRenderer(EntityRendererProvider.Context context) {
         super(context, new CandyCaneflyModel());
     }
 
-
+    @Override
+    public ResourceLocation getTextureLocation(CandyCaneflyEntity animatable) {
+        return LOCATION_BY_VARIANT.get(animatable.getVariant());
+    }
 }

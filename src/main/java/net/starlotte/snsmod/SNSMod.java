@@ -20,6 +20,8 @@ import net.starlotte.snsmod.block.SNSBlocks;
 import net.starlotte.snsmod.block.entity.SNSBlockEntities;
 import net.starlotte.snsmod.entity.SNSEntities;
 import net.starlotte.snsmod.entity.client.renderer.entity.category.herb.ambient.CandyCaneflyRenderer;
+import net.starlotte.snsmod.entity.client.renderer.entity.category.herb.tameable.CandyCaneCatRenderer;
+import net.starlotte.snsmod.entity.client.renderer.entity.category.herb.tameable.CandyCaneWolfRenderer;
 import net.starlotte.snsmod.item.SNSItems;
 import net.starlotte.snsmod.painting.SNSPaintings;
 import net.starlotte.snsmod.particle.SNSParticles;
@@ -98,7 +100,16 @@ public class SNSMod {
 
                 MenuScreens.register(SNSMenuTypes.CANDY_CANE_FURNACE_MENU.get(), CandyCaneFurnaceScreen::new);
                 Sheets.addWoodType(SNSWoodTypes.CANDY_CANE);
+//entiy renderers
+    //candy cane
+        //ambient
                 EntityRenderers.register(SNSEntities.CANDY_CANEFLY.get(), CandyCaneflyRenderer::new);
+        //tameable
+                EntityRenderers.register(SNSEntities.CANDY_CANE_CAT.get(), CandyCaneCatRenderer::new);
+                EntityRenderers.register(SNSEntities.CANDY_CANE_WOLF.get(), CandyCaneWolfRenderer::new);
+        //hostile
+
+
             });
         }
     }

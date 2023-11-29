@@ -12,6 +12,7 @@ import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.starlotte.snsmod.SNSMod;
+import net.starlotte.snsmod.entity.SNSEntities;
 import net.starlotte.snsmod.worldgen.SNSPlacedFeatures;
 
 public class SNSBiomes {
@@ -49,11 +50,9 @@ public class SNSBiomes {
             globalOverworldGeneration(biomeBuilder);
   //SPAWNING
             MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-            BiomeDefaultFeatures.farmAnimals(spawnBuilder);
-            BiomeDefaultFeatures.commonSpawns(spawnBuilder);
-            spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 2, 3, 5));
-            spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.COW, 5, 4, 4));
-            spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
+            spawnBuilder.addSpawn(MobCategory.AMBIENT, new MobSpawnSettings.SpawnerData(SNSEntities.CANDY_CANEFLY.get(), 10, 3, 5));
+            spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(SNSEntities.CANDY_CANE_CAT.get(), 5, 4, 4));
+            spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(SNSEntities.CANDY_CANE_WOLF.get(), 5, 4, 4));
 
             return new Biome.BiomeBuilder()
                     .hasPrecipitation(true)
@@ -80,11 +79,7 @@ public class SNSBiomes {
         globalOverworldGeneration(biomeBuilder);
         //SPAWNING
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-        BiomeDefaultFeatures.farmAnimals(spawnBuilder);
-        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 2, 3, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.COW, 5, 4, 4));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
+
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
@@ -115,11 +110,7 @@ public class SNSBiomes {
         globalOverworldGeneration(biomeBuilder);
         //SPAWNING
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-        BiomeDefaultFeatures.farmAnimals(spawnBuilder);
-        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 2, 3, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.COW, 5, 4, 4));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
+
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
@@ -146,11 +137,7 @@ public class SNSBiomes {
         globalOverworldGeneration(biomeBuilder);
         //SPAWNING
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-        BiomeDefaultFeatures.farmAnimals(spawnBuilder);
-        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 2, 3, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.COW, 5, 4, 4));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
+
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)

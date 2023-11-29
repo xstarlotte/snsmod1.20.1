@@ -11,5 +11,14 @@ public class CandyCaneflyModel<T extends CandyCaneflyEntity> extends DefaultedEn
     // We use the alternate super-constructor here to tell the model it should handle head-turning for us
     public CandyCaneflyModel() {
         super(new ResourceLocation(SNSMod.MOD_ID, "category/herb/ambient/candy_canefly"), true);
+
     }
+/*
+    @Override
+    public ResourceLocation getTextureResource(T animatable) {
+        return new ResourceLocation(SNSMod.MOD_ID, "category/herb/ambient/mint_candy_canefly");
+                new ResourceLocation(SNSMod.MOD_ID, "category/herb/ambient/peppermint_candy_canefly");
+    }
+    */
+
 }

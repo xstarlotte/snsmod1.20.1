@@ -228,6 +228,9 @@
   "block.snsmod.toothpaste_stone_stairs": "Toothpaste Stone Stairs",
   "block.snsmod.toothpaste_stone_wall": "Toothpaste Stone Wall",
 
+  "entity.snsmod.candy_canefly": "Candy Canefly",
+  "entity.snsmod.candy_cane_cat": "Candy Cane Cat",
+  "entity.snsmod.candy_cane_wolf": "Candy Cane Wolf",
 
   "item.snsmod.candy_cane": "Candy Cane",
   "item.snsmod.candy_cane_sugar": "Candy Cane Sugar",
@@ -237,8 +240,15 @@
   "item.snsmod.polo": "Polo",
   "item.snsmod.toothpaste": "Toothpaste",
 
+  "item.snsmod.mint_humbug": "Mint Humbug",
+
   "item.snsmod.cinnamon_roll": "Cinnamon Roll",
+  "item.snsmod.glazed_cinnamon_roll": "Glazed Cinnamon Roll",
   "item.snsmod.cinnamon_sticks": "Cinnamon Sticks",
+
+  "item.snsmod.candy_canefly_spawn_egg": "Candy Canefly Spawn Egg",
+  "item.snsmod.candy_cane_cat_spawn_egg": "Candy Cane Cat Spawn Egg",
+  "item.snsmod.candy_cane_wolf_spawn_egg": "Candy Cane Wolf Spawn Egg",
 
   "painting.snsmod.candy_cane.title": "Candy Cane",
   "painting.snsmod.candy_cane.author": "Starlotte",
@@ -257,6 +267,7 @@
 
   "snstab.block_tab": "Blocks - Sweet Not Savoury",
   "snstab.decoration_tab": "Decorations - Sweet Not Savoury",
+  "snstab.entities_tab": "Entities - Sweet Not Savoury",
   "snstab.food_tab": "Food - Sweet Not Savoury",
   "snstab.machines_tab": "Machines - Sweet Not Savoury",
   "snstab.misc_tab": "Misc - Sweet Not Savoury"

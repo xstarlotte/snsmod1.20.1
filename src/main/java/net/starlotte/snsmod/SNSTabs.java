@@ -41,8 +41,6 @@ public class SNSTabs {
                 output.accept(SNSBlocks.CANDY_CANE_TRAPDOOR.get());
 
 
-                output.accept(SNSItems.CANDY_CANEFLY_SPAWN_EGG.get());
-
                 //CANDY_CANE_BRICKS
                 output.accept(SNSBlocks.CANDY_CANE_BRICKS.get());
                 output.accept(SNSBlocks.CANDY_CANE_BRICKS_BUTTON.get());
@@ -242,6 +240,13 @@ public class SNSTabs {
 
             }).build());
 
+    public static final RegistryObject<CreativeModeTab> ENTITIES_TAB = CREATIVE_MODE_TABS.register("entities_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANEFLY_SPAWN_EGG.get()))
+            .title(Component.translatable("snstab.entities_tab")).displayItems((displayParameters, output) -> {
+                output.accept(SNSItems.CANDY_CANEFLY_SPAWN_EGG.get());
+                output.accept(SNSItems.CANDY_CANE_CAT_SPAWN_EGG.get());
+                output.accept(SNSItems.CANDY_CANE_WOLF_SPAWN_EGG.get());
+            }).build());
+
     public static final RegistryObject<CreativeModeTab> FOOD_TAB = CREATIVE_MODE_TABS.register("food_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(SNSItems.CANDY_CANE.get()))
             .title(Component.translatable("snstab.food_tab")).displayItems((displayParameters, output) -> {
                 output.accept(SNSItems.CANDY_CANE.get());
@@ -251,7 +256,10 @@ public class SNSTabs {
                 output.accept(SNSItems.POLO.get());
                 output.accept(SNSItems.TOOTHPASTE.get());
 
+                output.accept(SNSItems.MINT_HUMBUG.get());
+
                 output.accept(SNSItems.CINNAMON_ROLL.get());
+                output.accept(SNSItems.GLAZED_CINNAMON_ROLL.get());
                 output.accept(SNSItems.CINNAMON_STICKS.get());
             }).build());
 
@@ -265,6 +273,8 @@ public class SNSTabs {
                 output.accept(SNSItems.CANDY_CANE_SUGAR.get());
                 output.accept(SNSBlocks.HERB_MAYFAIR_PORTAL.get());
             }).build());
+
+
 
 
 

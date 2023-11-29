@@ -113,10 +113,16 @@ public class SNSItemModelProvider extends ItemModelProvider {
         simpleItem(SNSItems.POLO);
         simpleItem(SNSItems.TOOTHPASTE);
 
+        simpleItem(SNSItems.MINT_HUMBUG);
+
         simpleItem(SNSItems.CINNAMON_ROLL);
+        simpleItem(SNSItems.GLAZED_CINNAMON_ROLL);
         simpleItem(SNSItems.CINNAMON_STICKS);
 //SPAWN EGGS
         withExistingParent(SNSItems.CANDY_CANEFLY_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+        withExistingParent(SNSItems.CANDY_CANE_CAT_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(SNSItems.CANDY_CANE_WOLF_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 //TORCH
         simpleTorch(SNSBlocks.CANDY_CANE_TORCH);
 
